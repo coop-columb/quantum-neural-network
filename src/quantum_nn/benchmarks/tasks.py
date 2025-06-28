@@ -5,18 +5,18 @@ This module provides standardized tasks for benchmarking
 quantum neural network performance.
 """
 
-from typing import Dict, List, Optional, Tuple, Union, Any, Callable
 import os
+from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 
 import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.datasets import (
-    make_classification,
-    make_regression,
-    make_moons,
     load_digits,
+    make_classification,
+    make_moons,
+    make_regression,
 )
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 
 def get_benchmark_task(
@@ -127,7 +127,7 @@ def _generate_multiclass_classification(
     X = scaler.fit_transform(X)
 
     # One-hot encode targets
-    encoder = OneHotEncoder(sparse=False)
+    encoder = OneHotEncoder(sparse_output=False)
     y = encoder.fit_transform(y.reshape(-1, 1))
 
     task_info = {
@@ -211,7 +211,7 @@ def _generate_digits(
     X = scaler.fit_transform(X)
 
     # One-hot encode targets
-    encoder = OneHotEncoder(sparse=False)
+    encoder = OneHotEncoder(sparse_output=False)
     y = encoder.fit_transform(y.reshape(-1, 1))
 
     task_info = {

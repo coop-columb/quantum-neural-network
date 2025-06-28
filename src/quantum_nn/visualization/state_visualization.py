@@ -7,11 +7,11 @@ using various representation formats.
 
 from typing import List, Optional, Tuple, Union
 
-import matplotlib.pyplot as plt
 import matplotlib.cm as cm
-from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
 import numpy as np
 import pennylane as qml
+from mpl_toolkits.mplot3d import Axes3D
 
 
 def plot_state_amplitudes(

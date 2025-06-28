@@ -3,13 +3,13 @@ Tests for quantum circuit templates.
 """
 
 import numpy as np
-import pytest
 import pennylane as qml
+import pytest
 
 from quantum_nn.circuits.templates import (
-    StronglyEntanglingLayers,
     QuantumConvolutionLayers,
     QuantumResidualLayers,
+    StronglyEntanglingLayers,
 )
 
 

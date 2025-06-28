@@ -1,12 +1,12 @@
 """Medical imaging application for quantum neural networks."""
 
-from .preprocessing import ImageProcessor, DataPipeline
 from .models import (
-    MedicalQuantumClassifier,
-    create_medical_quantum_classifier,
     MedicalHybridModel,
+    MedicalQuantumClassifier,
     create_hybrid_medical_model,
+    create_medical_quantum_classifier,
 )
+from .preprocessing import DataPipeline, ImageProcessor
 
 __all__ = [
     "ImageProcessor",

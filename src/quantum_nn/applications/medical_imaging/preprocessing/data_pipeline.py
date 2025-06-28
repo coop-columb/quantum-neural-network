@@ -5,12 +5,13 @@ This module handles dataset creation, batching, and feeding data
 to the quantum neural network model.
 """
 
-from typing import Tuple, Dict, List, Optional, Union
+import logging
+from typing import Dict, List, Optional, Tuple, Union
+
 import numpy as np
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
 from sklearn.utils.class_weight import compute_class_weight
-import logging
 
 from .image_processor import ImageProcessor
 

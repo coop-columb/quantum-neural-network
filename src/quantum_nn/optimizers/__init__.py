@@ -1,8 +1,8 @@
 """Quantum-aware optimization techniques."""
 
-from .quantum_aware_optimizer import QuantumAwareOptimizer
-from .parameter_shift import ParameterShiftOptimizer
 from .natural_gradient import QuantumNaturalGradient
+from .parameter_shift import ParameterShiftOptimizer
+from .quantum_aware_optimizer import QuantumAwareOptimizer
 from .spsa import SPSAOptimizer
 
 __all__ = [

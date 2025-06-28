@@ -5,11 +5,12 @@ This module handles image loading, resizing, normalization, and
 feature extraction for medical images.
 """
 
-from typing import Tuple, Optional, List, Union
+import logging
+from typing import List, Optional, Tuple, Union
+
 import numpy as np
 import tensorflow as tf
 from sklearn.preprocessing import StandardScaler
-import logging
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)

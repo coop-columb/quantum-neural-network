@@ -35,7 +35,7 @@ class QuantumAwareOptimizer(tf.keras.optimizers.Optimizer):
             learning_rate: Initial learning rate or schedule
             **kwargs: Additional arguments to pass to the optimizer
         """
-        super().__init__(name=name, **kwargs)
+        super().__init__(learning_rate=learning_rate, name=name, **kwargs)
         self._learning_rate = self._build_learning_rate(learning_rate)
 
     def _build_learning_rate(

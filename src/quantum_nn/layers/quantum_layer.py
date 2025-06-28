@@ -5,10 +5,11 @@ This module provides a TensorFlow-compatible quantum layer
 that uses PennyLane for quantum circuit execution with fixed gradients.
 """
 
-from typing import Optional, Tuple, List, Union, Callable
+from typing import Callable, List, Optional, Tuple, Union
+
 import numpy as np
-import tensorflow as tf
 import pennylane as qml
+import tensorflow as tf
 
 
 class QuantumLayer(tf.keras.layers.Layer):

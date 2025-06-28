@@ -3,8 +3,8 @@ Tests for quantum data encodings.
 """
 
 import numpy as np
-import pytest
 import pennylane as qml
+import pytest
 
 from quantum_nn.circuits.encodings import (
     AmplitudeEncoding,

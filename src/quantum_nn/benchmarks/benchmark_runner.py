@@ -5,15 +5,15 @@ This module provides a framework for running standardized
 benchmarks on quantum neural network models.
 """
 
-from typing import Dict, List, Optional, Union, Any, Callable
-import time
 import json
 import os
+import time
 from datetime import datetime
+from typing import Any, Callable, Dict, List, Optional, Union
 
+import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
-import matplotlib.pyplot as plt
 
 from quantum_nn.models import QuantumModel
 from quantum_nn.visualization import plot_training_trajectory
@@ -46,7 +46,7 @@ class BenchmarkRunner:
         self.verbose = verbose
 
         # Create output directory if it doesn't exist
-        os.makedirs(output_dir, exist_ok=True)
+        if output_dir: os.makedirs(output_dir, exist_ok=True)
 
     def run_benchmark(
         self,

@@ -5,7 +5,7 @@ This module implements the SPSA algorithm, which is particularly
 well-suited for optimizing quantum circuits on noisy hardware.
 """
 
-from typing import Callable, Dict, List, Optional, Tuple, Union, Any
+from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 
 import numpy as np
 import tensorflow as tf

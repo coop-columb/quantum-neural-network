@@ -7,8 +7,8 @@ import pytest
 import tensorflow as tf
 
 from quantum_nn.applications.medical_imaging.preprocessing import (
-    ImageProcessor,
     DataPipeline,
+    ImageProcessor,
 )
 
 
