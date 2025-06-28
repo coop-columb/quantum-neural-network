@@ -2,17 +2,17 @@
 
 from .preprocessing import ImageProcessor, DataPipeline
 from .models import (
-    MedicalQuantumClassifier, 
+    MedicalQuantumClassifier,
     create_medical_quantum_classifier,
     MedicalHybridModel,
-    create_hybrid_medical_model
+    create_hybrid_medical_model,
 )
 
 __all__ = [
     "ImageProcessor",
-    "DataPipeline", 
+    "DataPipeline",
     "MedicalQuantumClassifier",
     "create_medical_quantum_classifier",
-    "MedicalHybridModel", 
-    "create_hybrid_medical_model"
+    "MedicalHybridModel",
+    "create_hybrid_medical_model",
 ]

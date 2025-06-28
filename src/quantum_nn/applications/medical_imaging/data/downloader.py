@@ -5,6 +5,7 @@ This module handles downloading and extracting the chest X-ray dataset.
 Since the dataset is hosted on Kaggle, it provides instructions for manual
 download if automatic download is not possible.
 """
+
 import os
 import zipfile
 import shutil
@@ -31,9 +32,9 @@ class DatasetDownloader:
         self.zip_path = Path(config.raw_data_dir) / "chest_xray.zip"
 
     def download_dataset(
-            self,
-            kaggle_json_path: Optional[str] = None,
-            progress_callback: Optional[Callable[[int, int], None]] = None
+        self,
+        kaggle_json_path: Optional[str] = None,
+        progress_callback: Optional[Callable[[int, int], None]] = None,
     ) -> bool:
         """
         Download the chest X-ray dataset.
@@ -62,29 +63,32 @@ class DatasetDownloader:
             return False
 
     def _download_with_kaggle(
-            self,
-            kaggle_json_path: str,
-            progress_callback: Optional[Callable[[int, int], None]] = None
+        self,
+        kaggle_json_path: str,
+        progress_callback: Optional[Callable[[int, int], None]] = None,
     ) -> bool:
         """Download dataset using Kaggle API."""
         try:
             # Set up kaggle credentials
             import kaggle
-            os.environ['KAGGLE_CONFIG_DIR'] = os.path.dirname(kaggle_json_path)
+
+            os.environ["KAGGLE_CONFIG_DIR"] = os.path.dirname(kaggle_json_path)
 
             # Download dataset
             print("Downloading dataset from Kaggle...")
             kaggle.api.dataset_download_files(
-                'paultimothymooney/chest-xray-pneumonia',
+                "paultimothymooney/chest-xray-pneumonia",
                 path=self.config.raw_data_dir,
-                unzip=True
+                unzip=True,
             )
 
             print("Dataset downloaded successfully!")
             return True
 
         except ImportError:
-            print("Kaggle package not installed. Please install with: pip install kaggle")
+            print(
+                "Kaggle package not installed. Please install with: pip install kaggle"
+            )
             return False
         except Exception as e:
             print(f"Error downloading dataset: {e}")
@@ -95,11 +99,15 @@ class DatasetDownloader:
         print("\n" + "=" * 60)
         print("MANUAL DOWNLOAD INSTRUCTIONS")
         print("=" * 60)
-        print("\n1. Visit: https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia")
+        print(
+            "\n1. Visit: https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia"
+        )
         print("2. Sign in to Kaggle (create free account if needed)")
         print("3. Click 'Download' button to download the dataset")
         print("4. Extract the downloaded archive")
-        print(f"5. Place the extracted 'chest_xray' folder in: {self.config.raw_data_dir}")
+        print(
+            f"5. Place the extracted 'chest_xray' folder in: {self.config.raw_data_dir}"
+        )
         print("\nExpected structure after extraction:")
         print("  chest_xray/")
         print("    ├── train/")
@@ -132,7 +140,7 @@ class DatasetDownloader:
         print(f"Extracting dataset from {zip_path}...")
 
         try:
-            with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+            with zipfile.ZipFile(zip_path, "r") as zip_ref:
                 zip_ref.extractall(self.config.raw_data_dir)
 
             print("Extraction complete!")
@@ -155,7 +163,7 @@ class DatasetDownloader:
             self.dataset_path / "test" / "NORMAL",
             self.dataset_path / "test" / "PNEUMONIA",
             self.dataset_path / "val" / "NORMAL",
-            self.dataset_path / "val" / "PNEUMONIA"
+            self.dataset_path / "val" / "PNEUMONIA",
         ]
 
         for dir_path in expected_dirs:
@@ -174,10 +182,7 @@ class DatasetDownloader:
         if not self._verify_dataset():
             return {"error": "Dataset not found or incomplete"}
 
-        stats = {
-            "dataset_path": str(self.dataset_path),
-            "splits": {}
-        }
+        stats = {"dataset_path": str(self.dataset_path), "splits": {}}
 
         for split in ["train", "test", "val"]:
             split_path = self.dataset_path / split
@@ -187,12 +192,11 @@ class DatasetDownloader:
             stats["splits"][split] = {
                 "normal": normal_count,
                 "pneumonia": pneumonia_count,
-                "total": normal_count + pneumonia_count
+                "total": normal_count + pneumonia_count,
             }
 
         stats["total_images"] = sum(
-            split_stats["total"]
-            for split_stats in stats["splits"].values()
+            split_stats["total"] for split_stats in stats["splits"].values()
         )
 
         return stats
@@ -231,8 +235,7 @@ class DatasetDownloader:
 
 
 def download_chest_xray_dataset(
-        config: Optional[DataConfig] = None,
-        kaggle_json_path: Optional[str] = None
+    config: Optional[DataConfig] = None, kaggle_json_path: Optional[str] = None
 ) -> bool:
     """
     Convenience function to download the chest X-ray dataset.

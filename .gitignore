@@ -53,3 +53,5 @@ data/medical_imaging/raw/
 data/medical_imaging/processed/
 data/medical_imaging/cache/
 backups/
+.comp/
+debugging_archive/
