@@ -9,5 +9,5 @@ __all__ = [
     "QuantumAwareOptimizer",
     "ParameterShiftOptimizer",
     "QuantumNaturalGradient",
-    "SPSAOptimizer"
+    "SPSAOptimizer",
 ]
