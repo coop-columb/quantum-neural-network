@@ -46,7 +46,8 @@ class BenchmarkRunner:
         self.verbose = verbose
 
         # Create output directory if it doesn't exist
-        if output_dir: os.makedirs(output_dir, exist_ok=True)
+        if output_dir:
+            os.makedirs(output_dir, exist_ok=True)
 
     def run_benchmark(
         self,
