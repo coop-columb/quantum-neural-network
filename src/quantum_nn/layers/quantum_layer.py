@@ -123,7 +123,7 @@ class QuantumLayer(tf.keras.layers.Layer):
     
     def call(self, inputs, training=None):
         """
-        Forward pass through the quantum layer with proper gradient support.
+        Forward pass through the quantum layer with automatic gradient support.
         
         Args:
             inputs: Input tensor
@@ -132,50 +132,9 @@ class QuantumLayer(tf.keras.layers.Layer):
         Returns:
             Quantum layer outputs
         """
-        @tf.custom_gradient
-        def quantum_forward(x, weights):
-            # Execute quantum circuit
-            output = self._execute_circuit(x, weights)
-            
-            def grad_fn(upstream, variables=None):
-                # Gradient computation using parameter-shift rule approximation
-                
-                # Gradient w.r.t weights
-                # Average the upstream gradient across batch dimension
-                weight_grad = tf.reduce_mean(upstream, axis=0)  # Shape: [n_qubits]
-                
-                # Expand to match weight shape using TF operations only
-                weight_shape_0 = tf.shape(weights)[0]
-                padding_size = tf.maximum(0, weight_shape_0 - self.n_qubits)
-                weight_grad = tf.pad(weight_grad, [[0, padding_size]])
-                
-                # Apply scaling factor
-                weight_grad = weight_grad * 0.1
-                
-                # Gradient w.r.t inputs
-                input_features = tf.shape(x)[1]
-                features_used = tf.minimum(input_features, self.n_qubits)
-                
-                # Compute gradient through the circuit
-                if self.measurement_type == "expectation":
-                    grad_core = upstream * (1 - output**2)  # Derivative of tanh
-                else:
-                    # For probability measurement, take gradient w.r.t first n_qubits outputs
-                    grad_core = upstream[:, :self.n_qubits]
-                
-                # Handle dimension matching
-                # Take only the features we used
-                input_grad_reduced = grad_core[:, :features_used]
-                
-                # Pad to match original input size
-                padding_for_input = input_features - features_used
-                input_grad = tf.pad(input_grad_reduced, [[0, 0], [0, padding_for_input]])
-                
-                return input_grad, weight_grad
-            
-            return output, grad_fn
-        
-        return quantum_forward(inputs, self.quantum_weights)
+        # Simply execute the circuit - TensorFlow will handle gradients automatically
+        # since all operations in _execute_circuit are differentiable
+        return self._execute_circuit(inputs, self.quantum_weights)
     
     def compute_output_shape(self, input_shape):
         """Compute the output shape."""
