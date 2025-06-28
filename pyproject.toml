@@ -61,10 +61,14 @@ disallow_untyped_defs = false
 disallow_incomplete_defs = false
 
 # Temporary - ignore type errors in new modules
-[tool.mypy-quantum_nn.applications.*]
+
+
+[[tool.mypy.overrides]]
+module = "quantum_nn.applications.*"
 ignore_errors = true
 
-[tool.mypy-quantum_nn.visualization.*]
+[[tool.mypy.overrides]]
+module = "quantum_nn.visualization.*"
 ignore_errors = true
 
 [tool.pytest.ini_options]
