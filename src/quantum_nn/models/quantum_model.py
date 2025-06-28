@@ -9,7 +9,7 @@ from typing import Any, Dict, List, Optional, Union
 
 import tensorflow as tf
 
-from ..layers.quantum_layer import QuantumLayer
+from quantum_nn.layers.quantum_layer import QuantumLayer
 
 
 class QuantumModel(tf.keras.Model):
