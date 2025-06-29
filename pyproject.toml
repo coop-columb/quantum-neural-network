@@ -72,9 +72,7 @@ ignore_errors = true
 module = "quantum_nn.visualization.*"
 ignore_errors = true
 
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-python_files = "test_*.py"
+
 [[tool.mypy.overrides]]
 module = "matplotlib.*"
 ignore_errors = true
@@ -82,3 +80,7 @@ ignore_errors = true
 [[tool.mypy.overrides]]
 module = "mpl_toolkits.*"
 ignore_errors = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
