@@ -12,7 +12,7 @@ import shutil
 import urllib.request
 import zipfile
 from pathlib import Path
-from typing import Callable, Optional
+from typing import Callable, Optional, Dict, Any, Union
 
 from ..data.config import DataConfig
 
@@ -33,7 +33,7 @@ class DatasetDownloader:
 
     def download_dataset(
         self,
-        kaggle_json_path: Optional[str] = None,
+        kaggle_json_path: Optional[Union[str, Path]] = None,
         progress_callback: Optional[Callable[[int, int], None]] = None,
     ) -> bool:
         """
@@ -55,8 +55,8 @@ class DatasetDownloader:
         self.config.create_directories()
 
         # Try automatic download if kaggle credentials provided
-        if kaggle_json_path and os.path.exists(kaggle_json_path):
-            return self._download_with_kaggle(kaggle_json_path, progress_callback)
+        if kaggle_json_path and Path(kaggle_json_path).exists():
+            return self._download_with_kaggle(str(kaggle_json_path), progress_callback)
         else:
             # Provide manual download instructions
             self._print_manual_instructions()
@@ -121,7 +121,7 @@ class DatasetDownloader:
         print("        └── PNEUMONIA/")
         print("\n" + "=" * 60)
 
-    def extract_dataset(self, zip_path: Optional[str] = None) -> bool:
+    def extract_dataset(self, zip_path: Optional[Union[str, Path]] = None) -> bool:
         """
         Extract dataset from zip file.
 
@@ -131,16 +131,16 @@ class DatasetDownloader:
         Returns:
             True if extraction successful
         """
-        zip_path = Path(zip_path) if zip_path else self.zip_path
+        zip_path_obj = Path(zip_path) if zip_path else self.zip_path
 
-        if not zip_path.exists():
-            print(f"Zip file not found: {zip_path}")
+        if not zip_path_obj.exists():
+            print(f"Zip file not found: {zip_path_obj}")
             return False
 
-        print(f"Extracting dataset from {zip_path}...")
+        print(f"Extracting dataset from {zip_path_obj}...")
 
         try:
-            with zipfile.ZipFile(zip_path, "r") as zip_ref:
+            with zipfile.ZipFile(str(zip_path_obj), "r") as zip_ref:
                 zip_ref.extractall(self.config.raw_data_dir)
 
             print("Extraction complete!")
@@ -177,7 +177,7 @@ class DatasetDownloader:
 
         return True
 
-    def get_dataset_stats(self) -> dict:
+    def get_dataset_stats(self) -> Dict[str, Any]:
         """Get statistics about the downloaded dataset."""
         if not self._verify_dataset():
             return {"error": "Dataset not found or incomplete"}
@@ -235,7 +235,7 @@ class DatasetDownloader:
 
 
 def download_chest_xray_dataset(
-    config: Optional[DataConfig] = None, kaggle_json_path: Optional[str] = None
+    config: Optional[DataConfig] = None, kaggle_json_path: Optional[Union[str, Path]] = None
 ) -> bool:
     """
     Convenience function to download the chest X-ray dataset.
