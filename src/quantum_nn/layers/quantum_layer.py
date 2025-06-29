@@ -5,10 +5,9 @@ This module provides a TensorFlow-compatible quantum layer
 that uses PennyLane for quantum circuit execution with fixed gradients.
 """
 
-from typing import Callable, List, Optional, Tuple, Union
+from typing import Optional, Tuple
 
 import numpy as np
-import pennylane as qml
 import tensorflow as tf
 
 
@@ -47,7 +46,7 @@ class QuantumLayer(tf.keras.layers.Layer):
         if n_qubits is not None:
             self.n_qubits = n_qubits
         elif circuit is not None and hasattr(circuit, "n_qubits"):
-            self.n_qubits = circuit.n_qubits
+            self.n_qubits = getattr(circuit, "n_qubits")  # type: ignore
         else:
             self.n_qubits = 4
         self.weight_shape = weight_shape
@@ -98,7 +97,6 @@ class QuantumLayer(tf.keras.layers.Layer):
         For now, using a simplified version that maintains gradient flow.
         """
         # Encode inputs into quantum-compatible format
-        batch_size = tf.shape(inputs)[0]
         input_features = tf.shape(inputs)[1]
 
         # Reduce to n_qubits if needed
@@ -113,8 +111,12 @@ class QuantumLayer(tf.keras.layers.Layer):
         angles = tf.nn.tanh(x_padded) * np.pi
 
         # Use weights to parameterize the circuit
-        weight_contrib = tf.reduce_sum(weights) / tf.cast(tf.size(weights), tf.float32)
-        weight_matrix = tf.reshape(weights[: self.n_qubits], [1, self.n_qubits])
+        weight_contrib = tf.reduce_sum(weights) / tf.cast(
+            tf.size(weights), tf.float32
+        )
+        weight_matrix = tf.reshape(
+            weights[: self.n_qubits], [1, self.n_qubits]
+        )
 
         # Simulate measurement
         if self.measurement_type == "expectation":
@@ -123,7 +125,9 @@ class QuantumLayer(tf.keras.layers.Layer):
         elif self.measurement_type == "probability":
             # Probability distribution over computational basis
             probs = tf.nn.softmax(angles * weight_contrib, axis=-1)
-            output = tf.concat([probs, 1 - probs], axis=-1)[:, : self.output_dim]
+            output = tf.concat([probs, 1 - probs], axis=-1)[
+                :, : self.output_dim
+            ]
         else:
             output = tf.nn.tanh(angles + weight_matrix * weight_contrib)
 
@@ -140,7 +144,7 @@ class QuantumLayer(tf.keras.layers.Layer):
         Returns:
             Quantum layer outputs
         """
-        # Simply execute the circuit - TensorFlow will handle gradients automatically
+        # Execute circuit - TensorFlow handles gradients automatically
         # since all operations in _execute_circuit are differentiable
         return self._execute_circuit(inputs, self.quantum_weights)
 
@@ -160,75 +164,3 @@ class QuantumLayer(tf.keras.layers.Layer):
             }
         )
         return config
-
-
-# Quick test
-if __name__ == "__main__":
-    print("🧪 Testing merged QuantumLayer...\n")
-
-    # Test 1: Original API compatibility
-    print("1️⃣ Testing original API:")
-    layer = QuantumLayer(n_qubits=4, measurement_type="expectation")
-
-    model = tf.keras.Sequential(
-        [
-            tf.keras.layers.Input(shape=(8,)),
-            tf.keras.layers.Dense(16, activation="relu"),
-            tf.keras.layers.BatchNormalization(),
-            layer,
-            tf.keras.layers.Dense(1),
-        ]
-    )
-
-    model.compile(optimizer="adam", loss="mse")
-
-    x = tf.random.normal((5, 8))
-    y = tf.random.normal((5, 1))
-
-    history = model.fit(x, y, epochs=3, verbose=0)
-    print(f"✅ Training successful! Loss: {history.history['loss'][-1]:.4f}")
-
-    # Test 2: Medical imaging compatibility
-    print("\n2️⃣ Testing medical imaging compatibility:")
-    medical_layer = QuantumLayer(n_qubits=8, measurement_type="expectation")
-
-    medical_model = tf.keras.Sequential(
-        [
-            tf.keras.layers.Input(shape=(192,)),
-            tf.keras.layers.Dense(64, activation="tanh"),
-            tf.keras.layers.LayerNormalization(),
-            medical_layer,
-            tf.keras.layers.Dense(1, activation="sigmoid"),
-        ]
-    )
-
-    medical_model.compile(
-        optimizer="adam", loss="binary_crossentropy", metrics=["accuracy"]
-    )
-
-    x_medical = tf.random.normal((10, 192))
-    y_medical = tf.cast(tf.random.uniform((10, 1)) > 0.5, tf.float32)
-
-    history = medical_model.fit(x_medical, y_medical, epochs=3, verbose=0)
-    print(f"✅ Medical model trained! Accuracy: {history.history['accuracy'][-1]:.4f}")
-
-    # Test 3: Test with existing medical models
-    print("\n3️⃣ Testing integration with medical imaging models:")
-    try:
-        # Import medical models directly to test
-        from quantum_nn.applications.medical_imaging.models import (
-            MedicalQuantumClassifier,
-        )
-
-        classifier = MedicalQuantumClassifier(
-            input_shape=(64,), n_classes=2, n_qubits=4
-        )
-
-        test_input = tf.random.normal((2, 64))
-        output = classifier(test_input)
-        print(f"✅ MedicalQuantumClassifier works! Output shape: {output.shape}")
-
-    except Exception as e:
-        print(f"❌ Integration test failed: {str(e)}")
-
-    print("\n✨ All tests completed!")
