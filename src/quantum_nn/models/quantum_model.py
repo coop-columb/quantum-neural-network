@@ -5,7 +5,8 @@ This module provides the base class for quantum neural network models
 that integrates with TensorFlow Keras.
 """
 
-from typing import List, Union, Optional, Dict, Any
+from typing import Any, Dict, List, Optional, Union
+
 import tensorflow as tf
 
 from ..layers.quantum_layer import QuantumLayer

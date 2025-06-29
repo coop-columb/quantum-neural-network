@@ -5,14 +5,14 @@ This module implements models that combine classical neural networks
 with quantum components for enhanced medical image analysis.
 """
 
-from typing import Dict, List, Optional, Tuple, Union, Any
 import logging
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 import numpy as np
 import tensorflow as tf
 
-from quantum_nn.models import QuantumModel
 from quantum_nn.layers import QuantumLayer
+from quantum_nn.models import QuantumModel
 
 logger = logging.getLogger(__name__)
 

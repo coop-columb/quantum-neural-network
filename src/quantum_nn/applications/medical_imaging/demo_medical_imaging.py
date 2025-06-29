@@ -5,25 +5,25 @@ Medical imaging demonstration script.
 This script demonstrates how to use the quantum neural network framework
 for medical image classification tasks.
 """
+import logging
 import os
 import sys
-import logging
 from pathlib import Path
 
+import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
-import matplotlib.pyplot as plt
 
 # Add the src directory to the path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
 from quantum_nn.applications.medical_imaging import (
-    ImageProcessor,
     DataPipeline,
-    MedicalQuantumClassifier,
+    ImageProcessor,
     MedicalHybridModel,
-    create_medical_quantum_classifier,
+    MedicalQuantumClassifier,
     create_hybrid_medical_model,
+    create_medical_quantum_classifier,
 )
 from quantum_nn.benchmarks import run_classical_comparison
 

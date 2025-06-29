@@ -5,7 +5,7 @@ This module provides different methods to encode classical data into quantum sta
 which is a crucial aspect of quantum machine learning.
 """
 
-from typing import List, Optional, Callable, Union
+from typing import Callable, List, Optional, Union
 
 import numpy as np
 import pennylane as qml

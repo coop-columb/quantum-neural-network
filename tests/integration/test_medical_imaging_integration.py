@@ -7,10 +7,10 @@ import pytest
 import tensorflow as tf
 
 from quantum_nn.applications.medical_imaging import (
-    ImageProcessor,
     DataPipeline,
-    create_medical_quantum_classifier,
+    ImageProcessor,
     create_hybrid_medical_model,
+    create_medical_quantum_classifier,
 )
 
 

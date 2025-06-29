@@ -5,15 +5,15 @@ This module implements quantum neural networks specifically designed
 for medical image classification tasks.
 """
 
-from typing import Dict, List, Optional, Tuple, Union, Any
 import logging
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 import numpy as np
 import tensorflow as tf
 
-from quantum_nn.models import QuantumModel
-from quantum_nn.layers import QuantumLayer
 from quantum_nn.circuits import ParameterizedCircuit
+from quantum_nn.layers import QuantumLayer
+from quantum_nn.models import QuantumModel
 
 logger = logging.getLogger(__name__)
 

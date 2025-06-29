@@ -6,13 +6,13 @@ Since the dataset is hosted on Kaggle, it provides instructions for manual
 download if automatic download is not possible.
 """
 
+import hashlib
 import os
-import zipfile
 import shutil
 import urllib.request
+import zipfile
 from pathlib import Path
-from typing import Optional, Callable
-import hashlib
+from typing import Callable, Optional
 
 from ..data.config import DataConfig
 

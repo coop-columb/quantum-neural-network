@@ -5,15 +5,15 @@ This module provides utilities for comparing quantum neural networks
 with classical machine learning models on the same tasks.
 """
 
-from typing import Dict, List, Optional, Union, Any, Callable, Tuple
-import time
 import json
 import os
+import time
 from datetime import datetime
+from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 
+import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
-import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
 

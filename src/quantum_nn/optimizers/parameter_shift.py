@@ -6,7 +6,7 @@ gradients of quantum circuits, which is more suitable for
 quantum hardware than automatic differentiation.
 """
 
-from typing import Callable, Dict, List, Optional, Tuple, Union, Any
+from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 
 import numpy as np
 import tensorflow as tf

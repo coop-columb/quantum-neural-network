@@ -6,12 +6,12 @@ classical data into quantum states and computing quantum kernels
 that may provide advantages over classical kernel methods.
 """
 
-from typing import Dict, List, Optional, Tuple, Union, Any, Callable
+from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 
 import numpy as np
 import tensorflow as tf
 from sklearn.base import BaseEstimator, ClassifierMixin
-from sklearn.metrics import accuracy_score, f1_score, confusion_matrix
+from sklearn.metrics import accuracy_score, confusion_matrix, f1_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
@@ -214,8 +214,8 @@ class QuantumFeatureEncoder:
             y: Class labels for coloring (optional)
             figsize: Figure size
         """
-        import matplotlib.pyplot as plt
         import matplotlib.cm as cm
+        import matplotlib.pyplot as plt
 
         # Compute kernel matrix
         kernel_matrix = self.quantum_kernel(X)
@@ -475,8 +475,8 @@ class QuantumKernelClassifier(BaseEstimator, ClassifierMixin):
             resolution: Resolution of the grid
             figsize: Figure size
         """
-        import matplotlib.pyplot as plt
         import matplotlib.cm as cm
+        import matplotlib.pyplot as plt
 
         # Extract the two features
         X_2d = X[:, feature_indices]

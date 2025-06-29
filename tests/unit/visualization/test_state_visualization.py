@@ -7,8 +7,8 @@ import matplotlib
 matplotlib.use("Agg")  # Use non-interactive backend for testing
 
 import numpy as np
-import pytest
 import pennylane as qml
+import pytest
 
 from quantum_nn.visualization import (
     plot_state_amplitudes,
