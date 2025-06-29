@@ -1,4 +1,5 @@
 from typing import Tuple
+
 #!/usr/bin/env python
 """
 Medical imaging demonstration script.
