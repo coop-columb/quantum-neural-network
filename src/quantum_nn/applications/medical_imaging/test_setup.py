@@ -4,6 +4,7 @@ Test script to verify medical imaging application setup.
 This script tests the configuration and data downloader modules
 to ensure everything is set up correctly.
 """
+
 import os
 import sys
 from pathlib import Path
@@ -11,7 +12,10 @@ from pathlib import Path
 # Add parent directory to path to import our modules
 sys.path.append(str(Path(__file__).parent.parent.parent.parent))
 
-from quantum_nn.applications.medical_imaging.data.config import DataConfig, default_config
+from quantum_nn.applications.medical_imaging.data.config import (
+    DataConfig,
+    default_config,
+)
 from quantum_nn.applications.medical_imaging.data.downloader import DatasetDownloader
 
 
@@ -38,11 +42,13 @@ def test_configuration():
     config.create_directories()
 
     # Verify directories were created
-    dirs_created = all([
-        os.path.exists(config.raw_data_dir),
-        os.path.exists(config.processed_data_dir),
-        os.path.exists(config.cache_dir)
-    ])
+    dirs_created = all(
+        [
+            os.path.exists(config.raw_data_dir),
+            os.path.exists(config.processed_data_dir),
+            os.path.exists(config.cache_dir),
+        ]
+    )
 
     if dirs_created:
         print("✓ All directories created successfully!")
@@ -77,7 +83,7 @@ def test_downloader(config: DataConfig):
         if "error" not in stats:
             print("\nDataset Statistics:")
             print(f"  Total images: {stats['total_images']}")
-            for split, split_stats in stats['splits'].items():
+            for split, split_stats in stats["splits"].items():
                 print(f"\n  {split.upper()} set:")
                 print(f"    Normal: {split_stats['normal']}")
                 print(f"    Pneumonia: {split_stats['pneumonia']}")
@@ -92,7 +98,9 @@ def test_downloader(config: DataConfig):
         kaggle_json = Path.home() / ".kaggle" / "kaggle.json"
         if kaggle_json.exists():
             print("  - Kaggle credentials found. Run:")
-            print("    downloader.download_dataset(kaggle_json_path='~/.kaggle/kaggle.json')")
+            print(
+                "    downloader.download_dataset(kaggle_json_path='~/.kaggle/kaggle.json')"
+            )
         else:
             print("  - No Kaggle credentials found.")
             downloader._print_manual_instructions()
@@ -107,7 +115,7 @@ def create_sample_dataset(downloader: DatasetDownloader):
     print("=" * 60)
 
     response = input("\nCreate a sample dataset with 10 images per class? (y/n): ")
-    if response.lower() == 'y':
+    if response.lower() == "y":
         success = downloader.create_sample_dataset(n_samples_per_class=10)
         if success:
             print("✓ Sample dataset created successfully!")
