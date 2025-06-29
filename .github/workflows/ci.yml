@@ -2,9 +2,20 @@ name: Continuous Integration
 
 on:
   push:
-    branches: [ main, development ]
+    branches: [ 
+      main, 
+      development,
+      feature/fix-gradient-shapes,
+      feature/quantum-applications,
+      feature/advanced-circuits,
+      feature/benchmark-suite,
+      feature/quantum-optimizers,
+      feature/real-quantum-circuits,
+      feature/visualization-tools
+    ]
   pull_request:
-    branches: [ main, development ]
+    branches: [ main ]
+    types: [opened, synchronize, reopened]
 
 jobs:
   test:
