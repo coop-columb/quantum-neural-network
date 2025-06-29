@@ -43,7 +43,13 @@ class QuantumLayer(tf.keras.layers.Layer):
         super().__init__(**kwargs)
 
         self.circuit = circuit
-        self.n_qubits = n_qubits or (circuit.n_qubits if circuit else 4)
+        # Ensure we have a valid n_qubits value
+        if n_qubits is not None:
+            self.n_qubits = n_qubits
+        elif circuit is not None and hasattr(circuit, "n_qubits"):
+            self.n_qubits = circuit.n_qubits
+        else:
+            self.n_qubits = 4
         self.weight_shape = weight_shape
         self.measurement_type = measurement_type
 
@@ -209,15 +215,7 @@ if __name__ == "__main__":
     # Test 3: Test with existing medical models
     print("\n3️⃣ Testing integration with medical imaging models:")
     try:
-        # Temporarily replace the import
-        import quantum_nn.layers
-
-        # Save original
-        original_QuantumLayer = quantum_nn.layers.QuantumLayer
-        # Replace with our fixed version
-        quantum_nn.layers.QuantumLayer = QuantumLayer
-
-        # Now try importing medical models
+        # Import medical models directly to test
         from quantum_nn.applications.medical_imaging.models import (
             MedicalQuantumClassifier,
         )
@@ -229,9 +227,6 @@ if __name__ == "__main__":
         test_input = tf.random.normal((2, 64))
         output = classifier(test_input)
         print(f"✅ MedicalQuantumClassifier works! Output shape: {output.shape}")
-
-        # Restore original
-        quantum_nn.layers.QuantumLayer = original_QuantumLayer
 
     except Exception as e:
         print(f"❌ Integration test failed: {str(e)}")

@@ -5,7 +5,7 @@ This module provides the foundation for optimization algorithms
 specifically designed for quantum neural networks.
 """
 
-from typing import Callable, Dict, List, Optional, Tuple, Union
+from typing import Any, Callable, Dict, List, Optional, Tuple, Union, cast
 
 import numpy as np
 import tensorflow as tf
@@ -59,7 +59,7 @@ class QuantumAwareOptimizer(tf.keras.optimizers.Optimizer):
         """Apply gradients to variables."""
         raise NotImplementedError("Subclasses must implement apply_gradients")
 
-    def get_config(self) -> Dict:
+    def get_config(self) -> Dict[str, Any]:
         """Return the configuration of the optimizer."""
         config = super().get_config()
 
@@ -76,7 +76,7 @@ class QuantumAwareOptimizer(tf.keras.optimizers.Optimizer):
         else:
             config.update({"learning_rate": float(self._learning_rate.numpy())})
 
-        return config
+        return cast(Dict[str, Any], config)
 
     @property
     def learning_rate(

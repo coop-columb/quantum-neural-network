@@ -1,3 +1,3 @@
 """Data utilities and processing for quantum neural networks."""
 
-__all__ = []
+__all__: list[str] = []

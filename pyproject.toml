@@ -93,6 +93,10 @@ ignore_errors = true
 module = "mpl_toolkits.*"
 ignore_errors = true
 
+[[tool.mypy.overrides]]
+module = "quantum_nn.benchmarks.*"
+ignore_errors = true
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = "test_*.py"
