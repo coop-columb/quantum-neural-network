@@ -1,0 +1,1039 @@
+test (3.10)	UNKNOWN STEP	﻿2025-06-28T19:33:22.1460938Z Current runner version: '2.325.0'
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1486941Z ##[group]Runner Image Provisioner
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1487769Z Hosted Compute Agent
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1488324Z Version: 20250620.352
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1488946Z Commit: f262f3aba23b10ea191b2a62bdee1ca4c3d344da
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1489656Z Build Date: 2025-06-20T19:27:17Z
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1490207Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1490801Z ##[group]Operating System
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1491381Z Ubuntu
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1492041Z 24.04.2
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1492579Z LTS
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1493037Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1493529Z ##[group]Runner Image
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1494064Z Image: ubuntu-24.04
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1494637Z Version: 20250622.1.0
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1495584Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250622.1/images/ubuntu/Ubuntu2404-Readme.md
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1497157Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250622.1
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1498148Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1499244Z ##[group]GITHUB_TOKEN Permissions
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1501136Z Contents: read
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1501661Z Metadata: read
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1502636Z Packages: read
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1503162Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1505322Z Secret source: Actions
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1506145Z Prepare workflow directory
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1859644Z Prepare all required actions
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.1900546Z Getting action download info
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.5393904Z ##[group]Download immutable action package 'actions/checkout@v3'
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.5395362Z Version: 3.6.0
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.5396668Z Digest: sha256:942562b9c7d4b1f2557f1da21f4d3eb4eb4fd01f2ad78b2a6e187d1b193e0a0f
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.5397908Z Source commit SHA: f43a0e5ff2bd294095638e18286ca9a3d1956744
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.5398682Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.6274936Z ##[group]Download immutable action package 'actions/setup-python@v4'
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.6275801Z Version: 4.9.1
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.6276587Z Digest: sha256:f03e505388af670b5a108629e0ba26befc08d5c62b41f46146a45fe29ae509a5
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.6277695Z Source commit SHA: 7f4fc3e22c37d6ff65e88745f38bd3157c663f7c
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.6278437Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:22.8804273Z Download action repository 'codecov/codecov-action@v2' (SHA:f32b3a3741e1053eb607407145bc9619351dc93b)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.3990491Z Complete job name: test (3.10)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.4713225Z ##[group]Run actions/checkout@v3
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.4714520Z with:
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.4715407Z   repository: coop-columb/quantum-neural-network
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.4716801Z   token: ***
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.4717539Z   ssh-strict: true
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.4718358Z   persist-credentials: true
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.4719227Z   clean: true
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.4720020Z   sparse-checkout-cone-mode: true
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.4720963Z   fetch-depth: 1
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.4721715Z   fetch-tags: false
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.4722617Z   lfs: false
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.4723347Z   submodules: false
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.4724164Z   set-safe-directory: true
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.4725257Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5582894Z Syncing repository: coop-columb/quantum-neural-network
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5585586Z ##[group]Getting Git version info
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5587212Z Working directory is '/home/runner/work/quantum-neural-network/quantum-neural-network'
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5589466Z [command]/usr/bin/git version
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5605192Z git version 2.49.0
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5632271Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5646796Z Temporarily overriding HOME='/home/runner/work/_temp/38318f3c-1117-433a-91b5-c80af50ccd15' before making global git config changes
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5651217Z Adding repository directory to the temporary git global config as a safe directory
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5654067Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/quantum-neural-network/quantum-neural-network
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5682250Z Deleting the contents of '/home/runner/work/quantum-neural-network/quantum-neural-network'
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5685358Z ##[group]Initializing the repository
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5688593Z [command]/usr/bin/git init /home/runner/work/quantum-neural-network/quantum-neural-network
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5756170Z hint: Using 'master' as the name for the initial branch. This default branch name
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5758204Z hint: is subject to change. To configure the initial branch name to use in all
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5759958Z hint: of your new repositories, which will suppress this warning, call:
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5761410Z hint:
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5763224Z hint: 	git config --global init.defaultBranch <name>
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5765182Z hint:
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5767254Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5770413Z hint: 'development'. The just-created branch can be renamed via this command:
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5773070Z hint:
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5774322Z hint: 	git branch -m <name>
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5777366Z Initialized empty Git repository in /home/runner/work/quantum-neural-network/quantum-neural-network/.git/
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5782306Z [command]/usr/bin/git remote add origin https://github.com/coop-columb/quantum-neural-network
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5817672Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5820054Z ##[group]Disabling automatic garbage collection
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5822386Z [command]/usr/bin/git config --local gc.auto 0
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5848066Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5850298Z ##[group]Setting up auth
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5853865Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.5883108Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.6153288Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.6182054Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.6409930Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.6442423Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.6445154Z ##[group]Fetching the repository
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.6453948Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +cceb03eaef3f465359b25a3179b6a13790ed5ebd:refs/remotes/pull/2/merge
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9489486Z remote: Enumerating objects: 100, done.        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9492500Z remote: Counting objects:   1% (1/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9493989Z remote: Counting objects:   2% (2/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9495399Z remote: Counting objects:   3% (3/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9496801Z remote: Counting objects:   4% (4/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9497928Z remote: Counting objects:   5% (5/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9499055Z remote: Counting objects:   6% (6/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9500143Z remote: Counting objects:   7% (7/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9501235Z remote: Counting objects:   8% (8/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9502546Z remote: Counting objects:   9% (9/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9503676Z remote: Counting objects:  10% (10/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9504764Z remote: Counting objects:  11% (11/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9505859Z remote: Counting objects:  12% (12/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9506961Z remote: Counting objects:  13% (13/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9508055Z remote: Counting objects:  14% (14/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9509152Z remote: Counting objects:  15% (15/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9510241Z remote: Counting objects:  16% (16/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9511320Z remote: Counting objects:  17% (17/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9512942Z remote: Counting objects:  18% (18/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9514054Z remote: Counting objects:  19% (19/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9515168Z remote: Counting objects:  20% (20/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9516264Z remote: Counting objects:  21% (21/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9517363Z remote: Counting objects:  22% (22/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9518475Z remote: Counting objects:  23% (23/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9519578Z remote: Counting objects:  24% (24/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9520670Z remote: Counting objects:  25% (25/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9522668Z remote: Counting objects:  26% (26/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9523990Z remote: Counting objects:  27% (27/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9525123Z remote: Counting objects:  28% (28/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9526412Z remote: Counting objects:  29% (29/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9527533Z remote: Counting objects:  30% (30/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9528634Z remote: Counting objects:  31% (31/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9529751Z remote: Counting objects:  32% (32/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9530836Z remote: Counting objects:  33% (33/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9532151Z remote: Counting objects:  34% (34/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9533259Z remote: Counting objects:  35% (35/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9534356Z remote: Counting objects:  36% (36/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9535442Z remote: Counting objects:  37% (37/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9536528Z remote: Counting objects:  38% (38/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9537613Z remote: Counting objects:  39% (39/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9538690Z remote: Counting objects:  40% (40/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9539786Z remote: Counting objects:  41% (41/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9540878Z remote: Counting objects:  42% (42/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9542166Z remote: Counting objects:  43% (43/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9543295Z remote: Counting objects:  44% (44/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9544409Z remote: Counting objects:  45% (45/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9545525Z remote: Counting objects:  46% (46/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9547028Z remote: Counting objects:  47% (47/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9548635Z remote: Counting objects:  48% (48/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9549781Z remote: Counting objects:  49% (49/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9551596Z remote: Counting objects:  50% (50/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9553069Z remote: Counting objects:  51% (51/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9554188Z remote: Counting objects:  52% (52/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9555808Z remote: Counting objects:  53% (53/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9556967Z remote: Counting objects:  54% (54/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9558092Z remote: Counting objects:  55% (55/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9559207Z remote: Counting objects:  56% (56/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9560326Z remote: Counting objects:  57% (57/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9561443Z remote: Counting objects:  58% (58/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9562693Z remote: Counting objects:  59% (59/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9563805Z remote: Counting objects:  60% (60/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9564907Z remote: Counting objects:  61% (61/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9566013Z remote: Counting objects:  62% (62/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9567134Z remote: Counting objects:  63% (63/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9568245Z remote: Counting objects:  64% (64/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9569367Z remote: Counting objects:  65% (65/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9570461Z remote: Counting objects:  66% (66/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9571560Z remote: Counting objects:  67% (67/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9572927Z remote: Counting objects:  68% (68/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9574088Z remote: Counting objects:  69% (69/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9575531Z remote: Counting objects:  70% (70/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9576800Z remote: Counting objects:  71% (71/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9578252Z remote: Counting objects:  72% (72/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9579584Z remote: Counting objects:  73% (73/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9580835Z remote: Counting objects:  74% (74/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9582183Z remote: Counting objects:  75% (75/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9583513Z remote: Counting objects:  76% (76/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9584778Z remote: Counting objects:  77% (77/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9586032Z remote: Counting objects:  78% (78/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9587288Z remote: Counting objects:  79% (79/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9588563Z remote: Counting objects:  80% (80/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9589805Z remote: Counting objects:  81% (81/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9591050Z remote: Counting objects:  82% (82/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9592588Z remote: Counting objects:  83% (83/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9593762Z remote: Counting objects:  84% (84/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9595030Z remote: Counting objects:  85% (85/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9596208Z remote: Counting objects:  86% (86/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9597392Z remote: Counting objects:  87% (87/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9598606Z remote: Counting objects:  88% (88/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9599823Z remote: Counting objects:  89% (89/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9601048Z remote: Counting objects:  90% (90/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9602443Z remote: Counting objects:  91% (91/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9603716Z remote: Counting objects:  92% (92/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9604854Z remote: Counting objects:  93% (93/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9606019Z remote: Counting objects:  94% (94/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9607325Z remote: Counting objects:  95% (95/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9608478Z remote: Counting objects:  96% (96/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9609652Z remote: Counting objects:  97% (97/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9610885Z remote: Counting objects:  98% (98/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9612175Z remote: Counting objects:  99% (99/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9613393Z remote: Counting objects: 100% (100/100)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9614748Z remote: Counting objects: 100% (100/100), done.        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9616063Z remote: Compressing objects:   1% (1/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9617392Z remote: Compressing objects:   2% (2/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9618682Z remote: Compressing objects:   3% (3/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9619853Z remote: Compressing objects:   4% (4/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9621052Z remote: Compressing objects:   5% (5/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9622408Z remote: Compressing objects:   6% (6/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9623663Z remote: Compressing objects:   7% (7/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9624862Z remote: Compressing objects:   8% (8/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9626061Z remote: Compressing objects:   9% (9/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9627299Z remote: Compressing objects:  10% (10/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9628458Z remote: Compressing objects:  11% (11/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9629725Z remote: Compressing objects:  13% (12/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9630905Z remote: Compressing objects:  14% (13/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9632295Z remote: Compressing objects:  15% (14/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9633559Z remote: Compressing objects:  16% (15/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9634754Z remote: Compressing objects:  17% (16/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9635957Z remote: Compressing objects:  18% (17/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9637149Z remote: Compressing objects:  19% (18/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9638422Z remote: Compressing objects:  20% (19/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9639588Z remote: Compressing objects:  21% (20/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9640764Z remote: Compressing objects:  22% (21/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9643071Z remote: Compressing objects:  23% (22/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9645308Z remote: Compressing objects:  25% (23/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9646736Z remote: Compressing objects:  26% (24/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9647987Z remote: Compressing objects:  27% (25/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9649157Z remote: Compressing objects:  28% (26/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9650393Z remote: Compressing objects:  29% (27/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9651592Z remote: Compressing objects:  30% (28/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9653132Z remote: Compressing objects:  31% (29/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9654521Z remote: Compressing objects:  32% (30/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9655718Z remote: Compressing objects:  33% (31/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9656916Z remote: Compressing objects:  34% (32/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9658083Z remote: Compressing objects:  35% (33/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9659337Z remote: Compressing objects:  36% (34/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9660631Z remote: Compressing objects:  38% (35/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9662048Z remote: Compressing objects:  39% (36/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9663462Z remote: Compressing objects:  40% (37/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9664643Z remote: Compressing objects:  41% (38/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9666182Z remote: Compressing objects:  42% (39/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9668448Z remote: Compressing objects:  43% (40/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9670726Z remote: Compressing objects:  44% (41/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9672276Z remote: Compressing objects:  45% (42/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9673649Z remote: Compressing objects:  46% (43/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9674868Z remote: Compressing objects:  47% (44/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9676268Z remote: Compressing objects:  48% (45/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9678551Z remote: Compressing objects:  50% (46/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9680279Z remote: Compressing objects:  51% (47/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9681697Z remote: Compressing objects:  52% (48/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9683280Z remote: Compressing objects:  53% (49/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9684507Z remote: Compressing objects:  54% (50/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9685697Z remote: Compressing objects:  55% (51/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9686932Z remote: Compressing objects:  56% (52/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9688135Z remote: Compressing objects:  57% (53/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9689501Z remote: Compressing objects:  58% (54/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9690776Z remote: Compressing objects:  59% (55/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9692213Z remote: Compressing objects:  60% (56/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9693447Z remote: Compressing objects:  61% (57/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9694706Z remote: Compressing objects:  63% (58/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9695879Z remote: Compressing objects:  64% (59/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9697119Z remote: Compressing objects:  65% (60/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9698298Z remote: Compressing objects:  66% (61/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9699525Z remote: Compressing objects:  67% (62/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9700684Z remote: Compressing objects:  68% (63/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9702246Z remote: Compressing objects:  69% (64/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9703979Z remote: Compressing objects:  70% (65/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9705908Z remote: Compressing objects:  71% (66/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9707643Z remote: Compressing objects:  72% (67/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9708998Z remote: Compressing objects:  73% (68/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9710255Z remote: Compressing objects:  75% (69/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9711504Z remote: Compressing objects:  76% (70/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9713049Z remote: Compressing objects:  77% (71/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9714305Z remote: Compressing objects:  78% (72/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9715502Z remote: Compressing objects:  79% (73/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9716771Z remote: Compressing objects:  80% (74/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9718114Z remote: Compressing objects:  81% (75/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9719298Z remote: Compressing objects:  82% (76/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9720577Z remote: Compressing objects:  83% (77/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9721966Z remote: Compressing objects:  84% (78/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9723327Z remote: Compressing objects:  85% (79/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9724596Z remote: Compressing objects:  86% (80/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9725792Z remote: Compressing objects:  88% (81/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9726957Z remote: Compressing objects:  89% (82/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9728241Z remote: Compressing objects:  90% (83/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9729403Z remote: Compressing objects:  91% (84/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9730605Z remote: Compressing objects:  92% (85/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9732058Z remote: Compressing objects:  93% (86/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9733267Z remote: Compressing objects:  94% (87/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9734482Z remote: Compressing objects:  95% (88/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9735682Z remote: Compressing objects:  96% (89/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9736927Z remote: Compressing objects:  97% (90/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9738087Z remote: Compressing objects:  98% (91/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9739370Z remote: Compressing objects: 100% (92/92)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9740622Z remote: Compressing objects: 100% (92/92), done.        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9742134Z Receiving objects:   1% (1/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9743158Z Receiving objects:   2% (2/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9744127Z Receiving objects:   3% (3/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9745084Z Receiving objects:   4% (4/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9746030Z Receiving objects:   5% (5/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9747002Z Receiving objects:   6% (6/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9747919Z Receiving objects:   7% (7/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9749054Z Receiving objects:   8% (8/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9750002Z Receiving objects:   9% (9/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9750967Z Receiving objects:  10% (10/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9752092Z Receiving objects:  11% (11/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9753061Z Receiving objects:  12% (12/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9754037Z Receiving objects:  13% (13/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9754994Z Receiving objects:  14% (14/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9756023Z Receiving objects:  15% (15/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9757104Z Receiving objects:  16% (16/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9758082Z Receiving objects:  17% (17/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9759097Z Receiving objects:  18% (18/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9760054Z Receiving objects:  19% (19/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9761028Z Receiving objects:  20% (20/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9762184Z Receiving objects:  21% (21/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9763171Z Receiving objects:  22% (22/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9764119Z Receiving objects:  23% (23/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9765145Z Receiving objects:  24% (24/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9766083Z Receiving objects:  25% (25/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9767097Z Receiving objects:  26% (26/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9768061Z Receiving objects:  27% (27/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9769066Z Receiving objects:  28% (28/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9770053Z Receiving objects:  29% (29/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9771026Z Receiving objects:  30% (30/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9772202Z Receiving objects:  31% (31/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9773213Z Receiving objects:  32% (32/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9774239Z Receiving objects:  33% (33/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9775229Z Receiving objects:  34% (34/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9799373Z Receiving objects:  35% (35/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9801049Z Receiving objects:  36% (36/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9802841Z Receiving objects:  37% (37/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9804668Z Receiving objects:  38% (38/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9806390Z Receiving objects:  39% (39/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9808250Z Receiving objects:  40% (40/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9809795Z Receiving objects:  41% (41/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9811402Z Receiving objects:  42% (42/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9813639Z Receiving objects:  43% (43/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9815181Z Receiving objects:  44% (44/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9816752Z Receiving objects:  45% (45/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9817836Z Receiving objects:  46% (46/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9819499Z Receiving objects:  47% (47/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9820756Z Receiving objects:  48% (48/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9822444Z Receiving objects:  49% (49/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9823969Z Receiving objects:  50% (50/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9824929Z Receiving objects:  51% (51/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9826017Z Receiving objects:  52% (52/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9826989Z Receiving objects:  53% (53/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9827974Z Receiving objects:  54% (54/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9828995Z Receiving objects:  55% (55/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9830031Z Receiving objects:  56% (56/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9831006Z Receiving objects:  57% (57/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9832396Z Receiving objects:  58% (58/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9833876Z Receiving objects:  59% (59/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9835471Z Receiving objects:  60% (60/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9837227Z Receiving objects:  61% (61/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9838829Z Receiving objects:  62% (62/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9839889Z Receiving objects:  63% (63/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9840928Z Receiving objects:  64% (64/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9842225Z Receiving objects:  65% (65/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9843252Z Receiving objects:  66% (66/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9844264Z Receiving objects:  67% (67/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9845317Z Receiving objects:  68% (68/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9846320Z Receiving objects:  69% (69/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9847354Z Receiving objects:  70% (70/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9848351Z Receiving objects:  71% (71/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9849353Z Receiving objects:  72% (72/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9919420Z Receiving objects:  73% (73/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9921258Z Receiving objects:  74% (74/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9922791Z Receiving objects:  75% (75/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9923825Z Receiving objects:  76% (76/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9924756Z Receiving objects:  77% (77/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9925665Z Receiving objects:  78% (78/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9926567Z Receiving objects:  79% (79/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9927475Z Receiving objects:  80% (80/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9928443Z Receiving objects:  81% (81/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9929908Z remote: Total 100 (delta 0), reused 52 (delta 0), pack-reused 0 (from 0)        
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9931412Z Receiving objects:  82% (82/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9932706Z Receiving objects:  83% (83/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9933628Z Receiving objects:  84% (84/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9934652Z Receiving objects:  85% (85/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9935563Z Receiving objects:  86% (86/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9936596Z Receiving objects:  87% (87/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9937509Z Receiving objects:  88% (88/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9938418Z Receiving objects:  89% (89/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9939325Z Receiving objects:  90% (90/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9940684Z Receiving objects:  91% (91/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9942219Z Receiving objects:  92% (92/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9943778Z Receiving objects:  93% (93/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9945334Z Receiving objects:  94% (94/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9946894Z Receiving objects:  95% (95/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9948432Z Receiving objects:  96% (96/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9949987Z Receiving objects:  97% (97/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9951553Z Receiving objects:  98% (98/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9953332Z Receiving objects:  99% (99/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9954860Z Receiving objects: 100% (100/100)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9956224Z Receiving objects: 100% (100/100), 83.06 KiB | 4.15 MiB/s, done.
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9957894Z From https://github.com/coop-columb/quantum-neural-network
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9959397Z  * [new ref]         cceb03eaef3f465359b25a3179b6a13790ed5ebd -> pull/2/merge
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9980776Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9982674Z ##[group]Determining the checkout info
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9984399Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9985690Z ##[group]Checking out the ref
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:23.9987370Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/2/merge
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0063923Z Note: switching to 'refs/remotes/pull/2/merge'.
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0064993Z 
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0065734Z You are in 'detached HEAD' state. You can look around, make experimental
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0067404Z changes and commit them, and you can discard any commits you make in this
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0069023Z state without impacting any branches by switching back to a branch.
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0069963Z 
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0070865Z If you want to create a new branch to retain commits you create, you may
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0072625Z do so (now or later) by using -c with the switch command. Example:
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0073479Z 
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0073847Z   git switch -c <new-branch-name>
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0074458Z 
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0074805Z Or undo this operation with:
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0075389Z 
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0075699Z   git switch -
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0076118Z 
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0076821Z Turn off this advice by setting config variable advice.detachedHead to false
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0077844Z 
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0078986Z HEAD is now at cceb03e Merge 9604eff922c0797371fb698655a5027051875ed3 into 69d0ecb189874b0ce8d1349dca4402d54dd94c10
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0082553Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0105661Z [command]/usr/bin/git log -1 --format='%H'
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0126845Z 'cceb03eaef3f465359b25a3179b6a13790ed5ebd'
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0405269Z ##[group]Run actions/setup-python@v4
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0406225Z with:
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0406901Z   python-version: 3.10
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0407689Z   check-latest: false
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0408684Z   token: ***
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0409407Z   update-environment: true
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0410270Z   allow-prereleases: false
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.0411081Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.2127680Z ##[group]Installed versions
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.2226719Z Successfully set up CPython (3.10.18)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.2228718Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.2374800Z ##[group]Run python -m pip install --upgrade pip
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.2376095Z [36;1mpython -m pip install --upgrade pip[0m
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.2377156Z [36;1mpip install -e ".[dev]"[0m
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.2484280Z shell: /usr/bin/bash -e {0}
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.2485149Z env:
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.2486051Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.2487541Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.2489003Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.2490305Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.2491615Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.2493112Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:24.2494222Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:25.1085780Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages (25.1.1)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:25.7144331Z Obtaining file:///home/runner/work/quantum-neural-network/quantum-neural-network
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:25.7164516Z   Installing build dependencies: started
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:26.8543412Z   Installing build dependencies: finished with status 'done'
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:26.8551360Z   Checking if build backend supports build_editable: started
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:27.1639520Z   Checking if build backend supports build_editable: finished with status 'done'
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:27.1648109Z   Getting requirements to build editable: started
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:27.4933323Z   Getting requirements to build editable: finished with status 'done'
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:27.4943442Z   Preparing editable metadata (pyproject.toml): started
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:27.6853476Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:27.9603126Z Collecting numpy>=1.22.0 (from quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:28.0475268Z   Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:28.2209743Z Collecting scipy>=1.8.0 (from quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:28.2416868Z   Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:28.3692285Z Collecting tensorflow>=2.9.0 (from quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:28.3896769Z   Downloading tensorflow-2.19.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:28.4172049Z Collecting pennylane>=0.24.0 (from quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:28.4376010Z   Downloading PennyLane-0.41.1-py3-none-any.whl.metadata (10 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:28.4922244Z Collecting qiskit>=0.37.0 (from quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:28.5127938Z   Downloading qiskit-2.1.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:28.7106650Z Collecting matplotlib>=3.5.0 (from quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:28.7311699Z   Downloading matplotlib-3.10.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:28.8609680Z Collecting pandas>=1.4.0 (from quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:28.8812247Z   Downloading pandas-2.3.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:28.9689941Z Collecting pytest>=7.0.0 (from quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:28.9894564Z   Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.0119491Z Collecting pytest-cov>=3.0.0 (from quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.0321036Z   Downloading pytest_cov-6.2.1-py3-none-any.whl.metadata (30 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.0910717Z Collecting black>=22.3.0 (from quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.1122593Z   Downloading black-25.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl.metadata (81 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.1615071Z Collecting isort>=5.10.0 (from quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.1828827Z   Downloading isort-6.0.1-py3-none-any.whl.metadata (11 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.3437648Z Collecting mypy>=0.950 (from quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.3638823Z   Downloading mypy-1.16.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl.metadata (2.1 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.4122637Z Collecting pylint>=2.13.0 (from quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.4325064Z   Downloading pylint-3.3.7-py3-none-any.whl.metadata (12 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.4774613Z Collecting pre-commit>=2.18.0 (from quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.4977521Z   Downloading pre_commit-4.2.0-py2.py3-none-any.whl.metadata (1.3 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.5218483Z Collecting click>=8.0.0 (from black>=22.3.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.5418415Z   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.5540147Z Collecting mypy-extensions>=0.4.3 (from black>=22.3.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.5743155Z   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.5936350Z Collecting packaging>=22.0 (from black>=22.3.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.6142452Z   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.6298358Z Collecting pathspec>=0.9.0 (from black>=22.3.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.6517542Z   Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.6759451Z Collecting platformdirs>=2 (from black>=22.3.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.6963542Z   Downloading platformdirs-4.3.8-py3-none-any.whl.metadata (12 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.7165080Z Collecting tomli>=1.1.0 (from black>=22.3.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.7374595Z   Downloading tomli-2.2.1-py3-none-any.whl.metadata (10 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.7607394Z Collecting typing-extensions>=4.0.1 (from black>=22.3.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.7811700Z   Downloading typing_extensions-4.14.0-py3-none-any.whl.metadata (3.0 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.8615081Z Collecting contourpy>=1.0.1 (from matplotlib>=3.5.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.8820243Z   Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.8991408Z Collecting cycler>=0.10 (from matplotlib>=3.5.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:29.9195667Z   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.0867616Z Collecting fonttools>=4.22.0 (from matplotlib>=3.5.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.1073930Z   Downloading fonttools-4.58.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (106 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.1922906Z Collecting kiwisolver>=1.3.1 (from matplotlib>=3.5.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.2128507Z   Downloading kiwisolver-1.4.8-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.2 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.4623524Z Collecting pillow>=8 (from matplotlib>=3.5.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.4829154Z   Downloading pillow-11.2.1-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (8.9 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.5192982Z Collecting pyparsing>=2.3.1 (from matplotlib>=3.5.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.5508951Z   Downloading pyparsing-3.2.3-py3-none-any.whl.metadata (5.0 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.5686797Z Collecting python-dateutil>=2.7 (from matplotlib>=3.5.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.5887224Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.6602296Z Collecting pytz>=2020.1 (from pandas>=1.4.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.6805055Z   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.6973366Z Collecting tzdata>=2022.7 (from pandas>=1.4.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.7173001Z   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.7447716Z Collecting networkx (from pennylane>=0.24.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.7652289Z   Downloading networkx-3.4.2-py3-none-any.whl.metadata (6.3 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.8136825Z Collecting rustworkx>=0.14.0 (from pennylane>=0.24.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.8341082Z   Downloading rustworkx-0.16.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.8498681Z Collecting autograd (from pennylane>=0.24.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.8699024Z   Downloading autograd-1.8.0-py3-none-any.whl.metadata (7.5 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.8940268Z Collecting tomlkit (from pennylane>=0.24.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.9145798Z   Downloading tomlkit-0.13.3-py3-none-any.whl.metadata (2.8 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.9271327Z Collecting appdirs (from pennylane>=0.24.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.9475461Z   Downloading appdirs-1.4.4-py2.py3-none-any.whl.metadata (9.0 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.9651962Z Collecting autoray>=0.6.11 (from pennylane>=0.24.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:30.9853782Z   Downloading autoray-0.7.1-py3-none-any.whl.metadata (5.8 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.0081242Z Collecting cachetools (from pennylane>=0.24.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.0284815Z   Downloading cachetools-6.1.0-py3-none-any.whl.metadata (5.4 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.0992553Z Collecting pennylane-lightning>=0.41 (from pennylane>=0.24.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.1198034Z   Downloading pennylane_lightning-0.41.1-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (12 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.1548361Z Collecting requests (from pennylane>=0.24.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.1755456Z   Downloading requests-2.32.4-py3-none-any.whl.metadata (4.9 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.1898744Z Collecting diastatic-malt (from pennylane>=0.24.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.2102332Z   Downloading diastatic_malt-2.15.2-py3-none-any.whl.metadata (2.6 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.2483236Z Collecting scipy-openblas32>=0.3.26 (from pennylane-lightning>=0.41->pennylane>=0.24.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.2689840Z   Downloading scipy_openblas32-0.3.30.0.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (57 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.2905039Z Collecting cfgv>=2.0.0 (from pre-commit>=2.18.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.3108955Z   Downloading cfgv-3.4.0-py2.py3-none-any.whl.metadata (8.5 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.3651350Z Collecting identify>=1.0.0 (from pre-commit>=2.18.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.3857499Z   Downloading identify-2.6.12-py2.py3-none-any.whl.metadata (4.4 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.4067071Z Collecting nodeenv>=0.11.1 (from pre-commit>=2.18.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.4270359Z   Downloading nodeenv-1.9.1-py2.py3-none-any.whl.metadata (21 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.4728181Z Collecting pyyaml>=5.1 (from pre-commit>=2.18.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.4933981Z   Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.5454229Z Collecting virtualenv>=20.10.0 (from pre-commit>=2.18.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.5658837Z   Downloading virtualenv-20.31.2-py3-none-any.whl.metadata (4.5 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.6797388Z Collecting astroid<=3.4.0.dev0,>=3.3.8 (from pylint>=2.13.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.6999306Z   Downloading astroid-3.3.10-py3-none-any.whl.metadata (4.4 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.7177614Z Collecting dill>=0.2 (from pylint>=2.13.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.7380011Z   Downloading dill-0.4.0-py3-none-any.whl.metadata (10 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.7695337Z Collecting mccabe<0.8,>=0.6 (from pylint>=2.13.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.7894719Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.8328439Z Collecting exceptiongroup>=1 (from pytest>=7.0.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.8530664Z   Downloading exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.8653779Z Collecting iniconfig>=1 (from pytest>=7.0.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.8855812Z   Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.9024501Z Collecting pluggy<2,>=1.5 (from pytest>=7.0.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.9226419Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.9473381Z Collecting pygments>=2.7.2 (from pytest>=7.0.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:31.9679555Z   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.3373194Z Collecting coverage>=7.5 (from coverage[toml]>=7.5->pytest-cov>=3.0.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.3579542Z   Downloading coverage-7.9.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.9 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.3829046Z Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib>=3.5.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.4029051Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.4594880Z Collecting stevedore>=3.0.0 (from qiskit>=0.37.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.4795922Z   Downloading stevedore-5.4.1-py3-none-any.whl.metadata (2.3 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.5525752Z Collecting pbr>=2.0.0 (from stevedore>=3.0.0->qiskit>=0.37.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.5733403Z   Downloading pbr-6.1.1-py2.py3-none-any.whl.metadata (3.4 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.5797924Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages (from pbr>=2.0.0->stevedore>=3.0.0->qiskit>=0.37.0->quantum_neural_net==0.1.0) (65.5.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.5972713Z Collecting absl-py>=1.0.0 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.6177226Z   Downloading absl_py-2.3.0-py3-none-any.whl.metadata (2.4 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.6317986Z Collecting astunparse>=1.6.0 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.6521633Z   Downloading astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.6713420Z Collecting flatbuffers>=24.3.25 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.6917722Z   Downloading flatbuffers-25.2.10-py2.py3-none-any.whl.metadata (875 bytes)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.7080168Z Collecting gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.7282947Z   Downloading gast-0.6.0-py3-none-any.whl.metadata (1.3 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.7437403Z Collecting google-pasta>=0.1.1 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.7642241Z   Downloading google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.7868936Z Collecting libclang>=13.0.0 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.8068526Z   Downloading libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl.metadata (5.2 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.8201963Z Collecting opt-einsum>=2.3.2 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:32.8405850Z   Downloading opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:33.1687286Z Collecting protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<6.0.0dev,>=3.20.3 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:33.1888691Z   Downloading protobuf-5.29.5-cp38-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:33.2181462Z Collecting termcolor>=1.1.0 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:33.2382901Z   Downloading termcolor-3.1.0-py3-none-any.whl.metadata (6.4 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:33.3515305Z Collecting wrapt>=1.11.0 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:33.3719371Z   Downloading wrapt-1.17.2-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.4 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.0373112Z Collecting grpcio<2.0,>=1.24.3 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.0577193Z   Downloading grpcio-1.73.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.0827024Z Collecting tensorboard~=2.19.0 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.1034024Z   Downloading tensorboard-2.19.0-py3-none-any.whl.metadata (1.8 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.1303744Z Collecting keras>=3.5.0 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.1506964Z   Downloading keras-3.10.0-py3-none-any.whl.metadata (6.0 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.1668644Z Collecting numpy>=1.22.0 (from quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.1875049Z   Downloading numpy-2.1.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.2393745Z Collecting h5py>=3.11.0 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.2600056Z   Downloading h5py-3.14.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.7 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.2874200Z Collecting ml-dtypes<1.0.0,>=0.5.1 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.3079638Z   Downloading ml_dtypes-0.5.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (21 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.3490889Z Collecting tensorflow-io-gcs-filesystem>=0.23.1 (from tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.3697732Z   Downloading tensorflow_io_gcs_filesystem-0.37.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (14 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.4990606Z Collecting charset_normalizer<4,>=2 (from requests->pennylane>=0.24.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.5193753Z   Downloading charset_normalizer-3.4.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.5408690Z Collecting idna<4,>=2.5 (from requests->pennylane>=0.24.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.5613748Z   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.5951172Z Collecting urllib3<3,>=1.21.1 (from requests->pennylane>=0.24.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.6155012Z   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.6409312Z Collecting certifi>=2017.4.17 (from requests->pennylane>=0.24.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.6614814Z   Downloading certifi-2025.6.15-py3-none-any.whl.metadata (2.4 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.7149881Z Collecting markdown>=2.6.8 (from tensorboard~=2.19.0->tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.7351375Z   Downloading markdown-3.8.2-py3-none-any.whl.metadata (5.1 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.8757386Z Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard~=2.19.0->tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.8960242Z   Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl.metadata (1.1 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.9239075Z Collecting werkzeug>=1.0.1 (from tensorboard~=2.19.0->tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.9442261Z   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.9810109Z Collecting wheel<1.0,>=0.23.0 (from astunparse>=1.6.0->tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:34.9827265Z   Using cached wheel-0.45.1-py3-none-any.whl.metadata (2.3 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.0648081Z Collecting rich (from keras>=3.5.0->tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.0853259Z   Downloading rich-14.0.0-py3-none-any.whl.metadata (18 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.1026902Z Collecting namex (from keras>=3.5.0->tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.1229421Z   Downloading namex-0.1.0-py3-none-any.whl.metadata (322 bytes)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.2144825Z Collecting optree (from keras>=3.5.0->tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.2350638Z   Downloading optree-0.16.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (30 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.2924905Z Collecting distlib<1,>=0.3.7 (from virtualenv>=20.10.0->pre-commit>=2.18.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.3130692Z   Downloading distlib-0.3.9-py2.py3-none-any.whl.metadata (5.2 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.3390467Z Collecting filelock<4,>=3.12.2 (from virtualenv>=20.10.0->pre-commit>=2.18.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.3592515Z   Downloading filelock-3.18.0-py3-none-any.whl.metadata (2.9 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.4379517Z Collecting MarkupSafe>=2.1.1 (from werkzeug>=1.0.1->tensorboard~=2.19.0->tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.4582191Z   Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.5014373Z Collecting markdown-it-py>=2.2.0 (from rich->keras>=3.5.0->tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.5216114Z   Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.5563664Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->keras>=3.5.0->tensorflow>=2.9.0->quantum_neural_net==0.1.0)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.5763811Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.6053399Z Downloading black-25.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl (1.8 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.6674138Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 36.6 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.6876942Z Downloading click-8.2.1-py3-none-any.whl (102 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.7100457Z Downloading isort-6.0.1-py3-none-any.whl (94 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.7325499Z Downloading matplotlib-3.10.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.6 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.7927364Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 147.2 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.8163702Z Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (325 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.8402979Z Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.8633753Z Downloading fonttools-4.58.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.8 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.8946664Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 161.6 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.9148063Z Downloading kiwisolver-1.4.8-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.9268945Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 156.6 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:35.9550071Z Downloading mypy-1.16.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl (12.6 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.0501680Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.6/12.6 MB 134.8 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.0704837Z Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.0929719Z Downloading packaging-25.0-py3-none-any.whl (66 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.1160357Z Downloading pandas-2.3.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.1916033Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 168.4 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.2118056Z Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.2343087Z Downloading PennyLane-0.41.1-py3-none-any.whl (2.3 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.2489113Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 177.2 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.2692332Z Downloading autoray-0.7.1-py3-none-any.whl (930 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.2780954Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 930.8/930.8 kB 124.2 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.2994164Z Downloading pennylane_lightning-0.41.1-cp310-cp310-manylinux_2_28_x86_64.whl (2.5 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.3145214Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 191.5 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.3351482Z Downloading pillow-11.2.1-cp310-cp310-manylinux_2_28_x86_64.whl (4.6 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.3664602Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 155.9 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.3866826Z Downloading platformdirs-4.3.8-py3-none-any.whl (18 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.4093172Z Downloading pre_commit-4.2.0-py2.py3-none-any.whl (220 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.4333331Z Downloading cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.4557357Z Downloading identify-2.6.12-py2.py3-none-any.whl (99 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.4787395Z Downloading nodeenv-1.9.1-py2.py3-none-any.whl (22 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.5017150Z Downloading pylint-3.3.7-py3-none-any.whl (522 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.5264292Z Downloading astroid-3.3.10-py3-none-any.whl (275 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.5495362Z Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.5719430Z Downloading dill-0.4.0-py3-none-any.whl (119 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.5946711Z Downloading pyparsing-3.2.3-py3-none-any.whl (111 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.6183883Z Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.6416573Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.6639792Z Downloading exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.6862968Z Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.7088380Z Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.7194209Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 133.6 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.7415724Z Downloading pytest_cov-6.2.1-py3-none-any.whl (24 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.7645403Z Downloading coverage-7.9.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (240 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.7880560Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.8116728Z Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.8363927Z Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.8441155Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 751.2/751.2 kB 108.6 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.8649298Z Downloading qiskit-2.1.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.5 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.9145339Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 174.4 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.9351207Z Downloading rustworkx-0.16.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.9507565Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 151.0 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:36.9713462Z Downloading scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (37.7 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:37.1886685Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.7/37.7 MB 175.2 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:37.2095498Z Downloading scipy_openblas32-0.3.30.0.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.6 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:37.3762333Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 51.1 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:37.3959013Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:37.4214019Z Downloading stevedore-5.4.1-py3-none-any.whl (49 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:37.4445094Z Downloading pbr-6.1.1-py2.py3-none-any.whl (108 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:37.4676792Z Downloading tensorflow-2.19.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (644.8 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:42.9502632Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 644.8/644.8 MB 73.3 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:42.9703220Z Downloading grpcio-1.73.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.0 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.0079620Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 166.1 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.0277184Z Downloading ml_dtypes-0.5.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.7 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.0595933Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 154.1 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.0797665Z Downloading numpy-2.1.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.3 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.1770294Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.3/16.3 MB 170.2 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.1969609Z Downloading protobuf-5.29.5-cp38-abi3-manylinux2014_x86_64.whl (319 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.2202467Z Downloading requests-2.32.4-py3-none-any.whl (64 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.2425083Z Downloading charset_normalizer-3.4.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (149 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.2649302Z Downloading idna-3.10-py3-none-any.whl (70 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.2874836Z Downloading tensorboard-2.19.0-py3-none-any.whl (5.5 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.3225025Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 164.5 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.3426519Z Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.3857085Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 158.5 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.4058368Z Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.4290973Z Downloading absl_py-2.3.0-py3-none-any.whl (135 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.4521020Z Downloading astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.4558861Z Using cached wheel-0.45.1-py3-none-any.whl (72 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.4759151Z Downloading certifi-2025.6.15-py3-none-any.whl (157 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.4988938Z Downloading flatbuffers-25.2.10-py2.py3-none-any.whl (30 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.5315322Z Downloading gast-0.6.0-py3-none-any.whl (21 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.5539158Z Downloading google_pasta-0.2.0-py3-none-any.whl (57 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.5771599Z Downloading h5py-3.14.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.6 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.6079430Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 155.5 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.6282631Z Downloading keras-3.10.0-py3-none-any.whl (1.4 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.6391682Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 149.2 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.6598234Z Downloading libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl (24.5 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.8040196Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.5/24.5 MB 173.1 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.8242044Z Downloading markdown-3.8.2-py3-none-any.whl (106 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.8472268Z Downloading opt_einsum-3.4.0-py3-none-any.whl (71 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.8700230Z Downloading tensorflow_io_gcs_filesystem-0.37.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.1 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.9022848Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 164.6 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.9224369Z Downloading termcolor-3.1.0-py3-none-any.whl (7.7 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.9447562Z Downloading tomli-2.2.1-py3-none-any.whl (14 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.9671220Z Downloading tomlkit-0.13.3-py3-none-any.whl (38 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:43.9897283Z Downloading typing_extensions-4.14.0-py3-none-any.whl (43 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.0122981Z Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.0356609Z Downloading virtualenv-20.31.2-py3-none-any.whl (6.1 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.0743692Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.1/6.1 MB 162.6 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.0959947Z Downloading distlib-0.3.9-py2.py3-none-any.whl (468 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.1195202Z Downloading filelock-3.18.0-py3-none-any.whl (16 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.1415538Z Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.1650506Z Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.1884169Z Downloading wrapt-1.17.2-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (82 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.2104949Z Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.2322677Z Downloading autograd-1.8.0-py3-none-any.whl (51 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.2543019Z Downloading cachetools-6.1.0-py3-none-any.whl (11 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.2763697Z Downloading diastatic_malt-2.15.2-py3-none-any.whl (167 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.2989130Z Downloading namex-0.1.0-py3-none-any.whl (5.9 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.3213287Z Downloading networkx-3.4.2-py3-none-any.whl (1.7 MB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.3332105Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 159.4 MB/s eta 0:00:00
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.3531517Z Downloading optree-0.16.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (405 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.3761617Z Downloading rich-14.0.0-py3-none-any.whl (243 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.3987188Z Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:44.4206922Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:45.2610900Z Building wheels for collected packages: quantum_neural_net
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:45.2621536Z   Building editable for quantum_neural_net (pyproject.toml): started
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:45.4897656Z   Building editable for quantum_neural_net (pyproject.toml): finished with status 'done'
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:45.4905181Z   Created wheel for quantum_neural_net: filename=quantum_neural_net-0.1.0-0.editable-py3-none-any.whl size=3120 sha256=ef203232fd1ce15809c41582b09bf270eb82aae1ce9e8cf9c94c1b72648a27d9
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:45.4907330Z   Stored in directory: /tmp/pip-ephem-wheel-cache-tjl4yqpm/wheels/d1/26/2a/f6ed474914d78966fe1161b33edebe4a45caeccbd1c15555f3
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:45.4925288Z Successfully built quantum_neural_net
+test (3.10)	UNKNOWN STEP	2025-06-28T19:33:45.9897904Z Installing collected packages: pytz, namex, libclang, flatbuffers, distlib, appdirs, wrapt, wheel, urllib3, tzdata, typing-extensions, tomlkit, tomli, termcolor, tensorflow-io-gcs-filesystem, tensorboard-data-server, six, scipy-openblas32, pyyaml, pyparsing, pygments, protobuf, pluggy, platformdirs, pillow, pbr, pathspec, packaging, opt-einsum, numpy, nodeenv, networkx, mypy-extensions, mdurl, mccabe, MarkupSafe, markdown, kiwisolver, isort, iniconfig, idna, identify, grpcio, gast, fonttools, filelock, dill, cycler, coverage, click, charset_normalizer, cfgv, certifi, cachetools, autoray, absl-py, werkzeug, virtualenv, stevedore, scipy, rustworkx, requests, python-dateutil, optree, mypy, ml-dtypes, markdown-it-py, h5py, google-pasta, exceptiongroup, contourpy, black, autograd, astunparse, astroid, tensorboard, rich, qiskit, pytest, pylint, pre-commit, pandas, matplotlib, diastatic-malt, pytest-cov, keras, tensorflow, pennylane-lightning, pennylane, quantum_neural_net
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:20.4478598Z 
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:20.4622834Z Successfully installed MarkupSafe-3.0.2 absl-py-2.3.0 appdirs-1.4.4 astroid-3.3.10 astunparse-1.6.3 autograd-1.8.0 autoray-0.7.1 black-25.1.0 cachetools-6.1.0 certifi-2025.6.15 cfgv-3.4.0 charset_normalizer-3.4.2 click-8.2.1 contourpy-1.3.2 coverage-7.9.1 cycler-0.12.1 diastatic-malt-2.15.2 dill-0.4.0 distlib-0.3.9 exceptiongroup-1.3.0 filelock-3.18.0 flatbuffers-25.2.10 fonttools-4.58.4 gast-0.6.0 google-pasta-0.2.0 grpcio-1.73.1 h5py-3.14.0 identify-2.6.12 idna-3.10 iniconfig-2.1.0 isort-6.0.1 keras-3.10.0 kiwisolver-1.4.8 libclang-18.1.1 markdown-3.8.2 markdown-it-py-3.0.0 matplotlib-3.10.3 mccabe-0.7.0 mdurl-0.1.2 ml-dtypes-0.5.1 mypy-1.16.1 mypy-extensions-1.1.0 namex-0.1.0 networkx-3.4.2 nodeenv-1.9.1 numpy-2.1.3 opt-einsum-3.4.0 optree-0.16.0 packaging-25.0 pandas-2.3.0 pathspec-0.12.1 pbr-6.1.1 pennylane-0.41.1 pennylane-lightning-0.41.1 pillow-11.2.1 platformdirs-4.3.8 pluggy-1.6.0 pre-commit-4.2.0 protobuf-5.29.5 pygments-2.19.2 pylint-3.3.7 pyparsing-3.2.3 pytest-8.4.1 pytest-cov-6.2.1 python-dateutil-2.9.0.post0 pytz-2025.2 pyyaml-6.0.2 qiskit-2.1.0 quantum_neural_net-0.1.0 requests-2.32.4 rich-14.0.0 rustworkx-0.16.0 scipy-1.15.3 scipy-openblas32-0.3.30.0.0 six-1.17.0 stevedore-5.4.1 tensorboard-2.19.0 tensorboard-data-server-0.7.2 tensorflow-2.19.0 tensorflow-io-gcs-filesystem-0.37.1 termcolor-3.1.0 tomli-2.2.1 tomlkit-0.13.3 typing-extensions-4.14.0 tzdata-2025.2 urllib3-2.5.0 virtualenv-20.31.2 werkzeug-3.1.3 wheel-0.45.1 wrapt-1.17.2
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:21.5009989Z ##[group]Run black --check src tests
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:21.5010305Z [36;1mblack --check src tests[0m
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:21.5072416Z shell: /usr/bin/bash -e {0}
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:21.5072648Z env:
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:21.5072883Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:21.5073298Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:21.5073697Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:21.5074053Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:21.5074395Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:21.5074746Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:21.5075037Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.4423834Z All done! ✨ 🍰 ✨
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.4424115Z 57 files would be left unchanged.
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.4689075Z ##[group]Run isort --check src tests
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.4689398Z [36;1misort --check src tests[0m
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.4748203Z shell: /usr/bin/bash -e {0}
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.4748435Z env:
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.4748704Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.4749099Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.4749482Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.4749818Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.4750165Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.4750504Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.4750781Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.6829418Z ##[group]Run mypy src
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.6829662Z [36;1mmypy src[0m
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.6889755Z shell: /usr/bin/bash -e {0}
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.6889993Z env:
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.6890229Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.6890652Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib/pkgconfig
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.6891048Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.6891418Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.6892015Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.18/x64
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.6892437Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.18/x64/lib
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:22.6892730Z ##[endgroup]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4814115Z src/quantum_nn/models/quantum_model.py:10: error: Library stubs not installed for "tensorflow"  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4816053Z src/quantum_nn/models/quantum_model.py:12: error: Cannot find implementation or library stub for module named ".layers.quantum_layer"  [import-not-found]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4817547Z src/quantum_nn/models/quantum_model.py:24: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4818808Z src/quantum_nn/models/quantum_model.py:66: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4819968Z src/quantum_nn/models/quantum_model.py:75: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4821187Z src/quantum_nn/models/quantum_model.py:87: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4822793Z src/quantum_nn/models/quantum_model.py:87: note: Use "-> None" if function does not return a value
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4901721Z src/quantum_nn/applications/medical_imaging/test_setup.py:15: error: Skipping analyzing "quantum_nn.applications.medical_imaging.data.config": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4904619Z src/quantum_nn/applications/medical_imaging/test_setup.py:19: error: Skipping analyzing "quantum_nn.applications.medical_imaging.data.downloader": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4906686Z src/quantum_nn/applications/medical_imaging/test_setup.py:22: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4908482Z src/quantum_nn/applications/medical_imaging/test_setup.py:67: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4909991Z src/quantum_nn/applications/medical_imaging/test_setup.py:111: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4911486Z src/quantum_nn/applications/medical_imaging/test_setup.py:126: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4913120Z src/quantum_nn/applications/medical_imaging/test_setup.py:126: note: Use "-> None" if function does not return a value
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4962942Z src/quantum_nn/applications/medical_imaging/data/config.py:70: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:25.4964424Z src/quantum_nn/applications/medical_imaging/data/config.py:70: note: Use "-> None" if function does not return a value
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2876033Z src/quantum_nn/applications/medical_imaging/data/downloader.py:73: error: Cannot find implementation or library stub for module named "kaggle"  [import-not-found]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2878187Z src/quantum_nn/applications/medical_imaging/data/downloader.py:73: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2879919Z src/quantum_nn/applications/medical_imaging/data/downloader.py:97: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2882371Z src/quantum_nn/applications/medical_imaging/data/downloader.py:97: note: Use "-> None" if function does not return a value
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2883967Z src/quantum_nn/applications/medical_imaging/data/downloader.py:134: error: Incompatible types in assignment (expression has type "Path", variable has type "str | None")  [assignment]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2885230Z src/quantum_nn/applications/medical_imaging/data/downloader.py:136: error: Item "str" of "str | None" has no attribute "exists"  [union-attr]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2886268Z src/quantum_nn/applications/medical_imaging/data/downloader.py:136: error: Item "None" of "str | None" has no attribute "exists"  [union-attr]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2887427Z src/quantum_nn/applications/medical_imaging/data/downloader.py:143: error: No overload variant of "ZipFile" matches argument types "str | None", "str"  [call-overload]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2888450Z src/quantum_nn/applications/medical_imaging/data/downloader.py:143: note: Possible overload variants:
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2889852Z src/quantum_nn/applications/medical_imaging/data/downloader.py:143: note:     def __init__(self, file: str | PathLike[str] | IO[bytes], mode: Literal['r', 'w', 'x', 'a'] = ..., compression: int = ..., allowZip64: bool = ..., compresslevel: int | None = ..., *, strict_timestamps: bool = ...) -> ZipFile
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2891885Z src/quantum_nn/applications/medical_imaging/data/downloader.py:143: note:     def __init__(self, file: str | PathLike[str] | _ZipReadable, mode: Literal['r'] = ..., compression: int = ..., allowZip64: bool = ..., compresslevel: int | None = ..., *, strict_timestamps: bool = ...) -> ZipFile
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2893771Z src/quantum_nn/applications/medical_imaging/data/downloader.py:143: note:     def __init__(self, file: str | PathLike[str] | _ZipWritable, mode: Literal['w', 'x'] = ..., compression: int = ..., allowZip64: bool = ..., compresslevel: int | None = ..., *, strict_timestamps: bool = ...) -> ZipFile
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2895423Z src/quantum_nn/applications/medical_imaging/data/downloader.py:143: note:     def __init__(self, file: str | PathLike[str] | _ZipReadableTellable, mode: Literal['a'] = ..., compression: int = ..., allowZip64: bool = ..., compresslevel: int | None = ..., *, strict_timestamps: bool = ...) -> ZipFile
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2896678Z src/quantum_nn/applications/medical_imaging/data/downloader.py:192: error: Unsupported target for indexed assignment ("Collection[str]")  [index]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2897688Z src/quantum_nn/applications/medical_imaging/data/downloader.py:198: error: Incompatible types in assignment (expression has type "int", target has type "Collection[str]")  [assignment]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:27.2898806Z src/quantum_nn/applications/medical_imaging/data/downloader.py:199: error: "Collection[str]" has no attribute "values"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9742078Z src/quantum_nn/optimizers/spsa.py:11: error: Library stubs not installed for "tensorflow"  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9743907Z src/quantum_nn/optimizers/spsa.py:13: error: Skipping analyzing "quantum_nn.optimizers.quantum_aware_optimizer": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9745717Z src/quantum_nn/optimizers/spsa.py:25: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9747171Z src/quantum_nn/optimizers/spsa.py:66: error: Need type annotation for "_velocity" (hint: "_velocity: dict[<type>, <type>] = ...")  [var-annotated]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9748520Z src/quantum_nn/optimizers/spsa.py:68: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9749858Z src/quantum_nn/optimizers/spsa.py:110: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9751230Z src/quantum_nn/optimizers/spsa.py:170: error: Returning Any from function declared to return "dict[str, Any]"  [no-any-return]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9769116Z src/quantum_nn/optimizers/quantum_aware_optimizer.py:11: error: Library stubs not installed for "tensorflow"  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9771004Z src/quantum_nn/optimizers/quantum_aware_optimizer.py:22: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9772928Z src/quantum_nn/optimizers/quantum_aware_optimizer.py:53: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9774529Z src/quantum_nn/optimizers/quantum_aware_optimizer.py:79: error: Returning Any from function declared to return "dict[Any, Any]"  [no-any-return]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9776049Z src/quantum_nn/optimizers/quantum_aware_optimizer.py:94: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9815932Z src/quantum_nn/optimizers/parameter_shift.py:12: error: Library stubs not installed for "tensorflow"  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9817825Z src/quantum_nn/optimizers/parameter_shift.py:14: error: Skipping analyzing "quantum_nn.optimizers.quantum_aware_optimizer": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9819776Z src/quantum_nn/optimizers/parameter_shift.py:26: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9821291Z src/quantum_nn/optimizers/parameter_shift.py:61: error: Need type annotation for "_m" (hint: "_m: dict[<type>, <type>] = ...")  [var-annotated]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9823028Z src/quantum_nn/optimizers/parameter_shift.py:62: error: Need type annotation for "_v" (hint: "_v: dict[<type>, <type>] = ...")  [var-annotated]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9824438Z src/quantum_nn/optimizers/parameter_shift.py:64: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9825860Z src/quantum_nn/optimizers/parameter_shift.py:109: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9827380Z src/quantum_nn/optimizers/parameter_shift.py:173: error: Returning Any from function declared to return "dict[str, Any]"  [no-any-return]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9856241Z src/quantum_nn/optimizers/natural_gradient.py:12: error: Library stubs not installed for "tensorflow"  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9858092Z src/quantum_nn/optimizers/natural_gradient.py:14: error: Skipping analyzing "quantum_nn.optimizers.quantum_aware_optimizer": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9860043Z src/quantum_nn/optimizers/natural_gradient.py:26: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9862146Z src/quantum_nn/optimizers/natural_gradient.py:151: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9863709Z src/quantum_nn/optimizers/natural_gradient.py:194: error: Returning Any from function declared to return "dict[str, Any]"  [no-any-return]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9947876Z src/quantum_nn/layers/quantum_layer.py:11: error: Skipping analyzing "pennylane": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9949421Z src/quantum_nn/layers/quantum_layer.py:12: error: Library stubs not installed for "tensorflow"  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9950771Z src/quantum_nn/layers/quantum_layer.py:23: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9952302Z src/quantum_nn/layers/quantum_layer.py:46: error: "object" has no attribute "n_qubits"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9953463Z src/quantum_nn/layers/quantum_layer.py:70: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9954657Z src/quantum_nn/layers/quantum_layer.py:82: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9955785Z src/quantum_nn/layers/quantum_layer.py:82: note: Use "-> None" if function does not return a value
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9956837Z src/quantum_nn/layers/quantum_layer.py:87: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9958247Z src/quantum_nn/layers/quantum_layer.py:126: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9959468Z src/quantum_nn/layers/quantum_layer.py:141: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9960671Z src/quantum_nn/layers/quantum_layer.py:145: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9962403Z src/quantum_nn/layers/quantum_layer.py:213: error: Skipping analyzing "quantum_nn.layers": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9964285Z src/quantum_nn/layers/quantum_layer.py:213: error: Skipping analyzing "quantum_nn": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:28.9966319Z src/quantum_nn/layers/quantum_layer.py:221: error: Skipping analyzing "quantum_nn.applications.medical_imaging.models": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0170163Z src/quantum_nn/circuits/templates.py:11: error: Skipping analyzing "pennylane": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0171679Z src/quantum_nn/circuits/templates.py:26: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0173132Z src/quantum_nn/circuits/templates.py:68: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0174364Z src/quantum_nn/circuits/templates.py:164: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0175585Z src/quantum_nn/circuits/templates.py:270: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0264900Z src/quantum_nn/circuits/parameterized_circuit.py:11: error: Skipping analyzing "pennylane": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0267019Z src/quantum_nn/circuits/parameterized_circuit.py:13: error: Skipping analyzing "quantum_nn.circuits.encodings": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0269210Z src/quantum_nn/circuits/parameterized_circuit.py:20: error: Skipping analyzing "quantum_nn.circuits.templates": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0270962Z src/quantum_nn/circuits/parameterized_circuit.py:154: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0273057Z src/quantum_nn/circuits/parameterized_circuit.py:208: error: Returning Any from function declared to return "int"  [no-any-return]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0465689Z src/quantum_nn/circuits/encodings.py:11: error: Skipping analyzing "pennylane": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0467258Z src/quantum_nn/circuits/encodings.py:26: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0468484Z src/quantum_nn/circuits/encodings.py:57: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0469671Z src/quantum_nn/circuits/encodings.py:109: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0470900Z src/quantum_nn/circuits/encodings.py:153: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0472382Z src/quantum_nn/circuits/encodings.py:209: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0768663Z src/quantum_nn/benchmarks/tasks.py:12: error: Cannot find implementation or library stub for module named "sklearn.datasets"  [import-not-found]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0770216Z src/quantum_nn/benchmarks/tasks.py:18: error: Cannot find implementation or library stub for module named "sklearn.model_selection"  [import-not-found]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0772398Z src/quantum_nn/benchmarks/tasks.py:19: error: Cannot find implementation or library stub for module named "sklearn.preprocessing"  [import-not-found]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0773856Z src/quantum_nn/benchmarks/tasks.py:77: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0775132Z src/quantum_nn/benchmarks/tasks.py:108: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0776407Z src/quantum_nn/benchmarks/tasks.py:144: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0777676Z src/quantum_nn/benchmarks/tasks.py:176: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0778667Z src/quantum_nn/benchmarks/tasks.py:201: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0779655Z src/quantum_nn/benchmarks/tasks.py:230: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0780631Z src/quantum_nn/benchmarks/tasks.py:276: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0892811Z src/quantum_nn/applications/medical_imaging/preprocessing/image_processor.py:12: error: Library stubs not installed for "tensorflow"  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0894585Z src/quantum_nn/applications/medical_imaging/preprocessing/image_processor.py:13: error: Cannot find implementation or library stub for module named "sklearn.preprocessing"  [import-not-found]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0896293Z src/quantum_nn/applications/medical_imaging/preprocessing/image_processor.py:57: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0897689Z src/quantum_nn/applications/medical_imaging/preprocessing/image_processor.py:57: note: Use "-> None" if function does not return a value
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0898935Z src/quantum_nn/applications/medical_imaging/preprocessing/image_processor.py:106: error: Returning Any from function declared to return "ndarray[Any, Any]"  [no-any-return]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0900199Z src/quantum_nn/applications/medical_imaging/preprocessing/image_processor.py:106: error: "ndarray[Any, Any]" has no attribute "numpy"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.0901438Z src/quantum_nn/applications/medical_imaging/preprocessing/image_processor.py:143: error: Returning Any from function declared to return "ndarray[Any, Any]"  [no-any-return]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1287648Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:12: error: Library stubs not installed for "tensorflow"  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1289405Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:14: error: Skipping analyzing "quantum_nn.circuits": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1291349Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:15: error: Skipping analyzing "quantum_nn.layers": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1293323Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:16: error: Skipping analyzing "quantum_nn.models": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1294864Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:29: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1296176Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:78: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1297343Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:78: note: Use "-> None" if function does not return a value
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1298788Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:103: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1299841Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:114: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1300745Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:114: note: Use "-> None" if function does not return a value
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1301600Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:123: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1302617Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:151: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1303572Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:151: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1304730Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:238: error: Incompatible types in assignment (expression has type "ndarray[Any, dtype[Any]]", variable has type "list[Any]")  [assignment]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1305821Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:276: error: "ndarray[Any, Any]" has no attribute "numpy"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1306783Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:286: error: Returning Any from function declared to return "ndarray[Any, Any]"  [no-any-return]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1307750Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:288: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1308701Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:306: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1309813Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:345: error: Argument 4 to "MedicalQuantumClassifier" has incompatible type "**dict[str, object]"; expected "int"  [arg-type]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1311009Z src/quantum_nn/applications/medical_imaging/models/quantum_classifier.py:345: error: Argument 4 to "MedicalQuantumClassifier" has incompatible type "**dict[str, object]"; expected "str"  [arg-type]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1368783Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:12: error: Library stubs not installed for "tensorflow"  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1369900Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:12: note: Hint: "python3 -m pip install types-tensorflow"
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1370766Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:12: note: (or run "mypy --install-types" to install all missing stub packages)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1372082Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:14: error: Skipping analyzing "quantum_nn.layers": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1373319Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:15: error: Skipping analyzing "quantum_nn.models": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1374423Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:28: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1375358Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:77: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1376167Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:77: note: Use "-> None" if function does not return a value
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1376949Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:98: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1377900Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:102: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1378722Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:132: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1379533Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:176: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1380333Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:212: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1381141Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:231: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1382178Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:260: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1382998Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:260: note: Use "-> None" if function does not return a value
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1383815Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:271: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1384672Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:308: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1385514Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:329: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1386427Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:347: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1387467Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:395: error: Argument 5 to "MedicalHybridModel" has incompatible type "**dict[str, object]"; expected "int"  [arg-type]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1388564Z src/quantum_nn/applications/medical_imaging/models/hybrid_model.py:395: error: Argument 5 to "MedicalHybridModel" has incompatible type "**dict[str, object]"; expected "str"  [arg-type]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1552112Z src/quantum_nn/applications/medical_imaging/preprocessing/data_pipeline.py:12: error: Library stubs not installed for "tensorflow"  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1553461Z src/quantum_nn/applications/medical_imaging/preprocessing/data_pipeline.py:13: error: Cannot find implementation or library stub for module named "sklearn.model_selection"  [import-not-found]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:29.1555162Z src/quantum_nn/applications/medical_imaging/preprocessing/data_pipeline.py:14: error: Cannot find implementation or library stub for module named "sklearn.utils.class_weight"  [import-not-found]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.2937925Z src/quantum_nn/visualization/training_visualization.py:13: error: Skipping analyzing "mpl_toolkits.mplot3d": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.2939509Z src/quantum_nn/visualization/training_visualization.py:82: error: "Axes" has no attribute "plot_surface"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.2940731Z src/quantum_nn/visualization/training_visualization.py:97: error: "scatter" of "Axes" gets multiple values for keyword argument "s"  [misc]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.2941987Z src/quantum_nn/visualization/training_visualization.py:110: error: "Axes" has no attribute "set_zlabel"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4194044Z src/quantum_nn/visualization/state_visualization.py:13: error: Skipping analyzing "pennylane": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4196015Z src/quantum_nn/visualization/state_visualization.py:14: error: Skipping analyzing "mpl_toolkits.mplot3d": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4197539Z src/quantum_nn/visualization/state_visualization.py:60: error: Module has no attribute "hsv"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4199037Z src/quantum_nn/visualization/state_visualization.py:63: error: Module has no attribute "hsv"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4200208Z src/quantum_nn/visualization/state_visualization.py:144: error: "Axes" has no attribute "plot_surface"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4201538Z src/quantum_nn/visualization/state_visualization.py:155: error: Argument 3 to "text" of "Axes" has incompatible type "int"; expected "str"  [arg-type]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4203268Z src/quantum_nn/visualization/state_visualization.py:155: error: Argument 4 to "text" of "Axes" has incompatible type "str"; expected "dict[str, Any] | None"  [arg-type]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4204415Z src/quantum_nn/visualization/state_visualization.py:156: error: Argument 3 to "text" of "Axes" has incompatible type "int"; expected "str"  [arg-type]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4205537Z src/quantum_nn/visualization/state_visualization.py:156: error: Argument 4 to "text" of "Axes" has incompatible type "str"; expected "dict[str, Any] | None"  [arg-type]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4206661Z src/quantum_nn/visualization/state_visualization.py:157: error: Argument 3 to "text" of "Axes" has incompatible type "float"; expected "str"  [arg-type]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4207769Z src/quantum_nn/visualization/state_visualization.py:157: error: Argument 4 to "text" of "Axes" has incompatible type "str"; expected "dict[str, Any] | None"  [arg-type]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4208945Z src/quantum_nn/visualization/state_visualization.py:165: error: "Axes" has no attribute "set_zticks"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4209788Z src/quantum_nn/visualization/state_visualization.py:235: error: "Axes" has no attribute "bar3d"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4210634Z src/quantum_nn/visualization/state_visualization.py:248: error: "Axes" has no attribute "plot_wireframe"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4211491Z src/quantum_nn/visualization/state_visualization.py:253: error: "Axes" has no attribute "set_zlabel"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4212431Z src/quantum_nn/visualization/state_visualization.py:265: error: "Axes" has no attribute "set_zlim"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4213270Z src/quantum_nn/visualization/state_visualization.py:279: error: "Axes" has no attribute "view_init"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4236914Z src/quantum_nn/visualization/circuit_drawer.py:12: error: Skipping analyzing "pennylane": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4238187Z src/quantum_nn/visualization/circuit_drawer.py:14: error: Skipping analyzing "quantum_nn.circuits": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4239095Z src/quantum_nn/visualization/circuit_drawer.py:51: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4239796Z src/quantum_nn/visualization/circuit_drawer.py:51: note: Use "-> None" if function does not return a value
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4334743Z src/quantum_nn/benchmarks/classical_comparison.py:16: error: Library stubs not installed for "tensorflow"  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4335990Z src/quantum_nn/benchmarks/classical_comparison.py:17: error: Cannot find implementation or library stub for module named "sklearn.metrics"  [import-not-found]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4337269Z src/quantum_nn/benchmarks/classical_comparison.py:18: error: Cannot find implementation or library stub for module named "sklearn.model_selection"  [import-not-found]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4338728Z src/quantum_nn/benchmarks/classical_comparison.py:20: error: Skipping analyzing "quantum_nn.benchmarks.benchmark_runner": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4340240Z src/quantum_nn/benchmarks/classical_comparison.py:21: error: Skipping analyzing "quantum_nn.models": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4341973Z src/quantum_nn/benchmarks/classical_comparison.py:24: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4343110Z src/quantum_nn/benchmarks/classical_comparison.py:152: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4344111Z src/quantum_nn/benchmarks/classical_comparison.py:155: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4345045Z src/quantum_nn/benchmarks/classical_comparison.py:158: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4345985Z src/quantum_nn/benchmarks/classical_comparison.py:161: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4346917Z src/quantum_nn/benchmarks/classical_comparison.py:164: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4347885Z src/quantum_nn/benchmarks/classical_comparison.py:167: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4349031Z src/quantum_nn/benchmarks/classical_comparison.py:245: error: Returning Any from function declared to return "dict[str, dict[str, Any]]"  [no-any-return]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4667608Z src/quantum_nn/benchmarks/benchmark_runner.py:16: error: Library stubs not installed for "tensorflow"  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4669073Z src/quantum_nn/benchmarks/benchmark_runner.py:18: error: Skipping analyzing "quantum_nn.models": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4670815Z src/quantum_nn/benchmarks/benchmark_runner.py:19: error: Skipping analyzing "quantum_nn.visualization": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4672547Z src/quantum_nn/benchmarks/benchmark_runner.py:163: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4673656Z src/quantum_nn/benchmarks/benchmark_runner.py:172: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4674616Z src/quantum_nn/benchmarks/benchmark_runner.py:188: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4675439Z src/quantum_nn/benchmarks/benchmark_runner.py:200: error: Module has no attribute "viridis"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4676230Z src/quantum_nn/benchmarks/benchmark_runner.py:210: error: Module has no attribute "plasma"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4677059Z src/quantum_nn/benchmarks/benchmark_runner.py:272: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4678172Z src/quantum_nn/benchmarks/benchmark_runner.py:304: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4679002Z src/quantum_nn/benchmarks/benchmark_runner.py:346: error: Module has no attribute "viridis"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4679826Z src/quantum_nn/benchmarks/benchmark_runner.py:364: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.4680659Z src/quantum_nn/benchmarks/benchmark_runner.py:406: error: Module has no attribute "plasma"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5142700Z src/quantum_nn/applications/quantum_embedding.py:12: error: Library stubs not installed for "tensorflow"  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5144786Z src/quantum_nn/applications/quantum_embedding.py:13: error: Cannot find implementation or library stub for module named "sklearn.base"  [import-not-found]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5146440Z src/quantum_nn/applications/quantum_embedding.py:14: error: Cannot find implementation or library stub for module named "sklearn.metrics"  [import-not-found]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5147659Z src/quantum_nn/applications/quantum_embedding.py:15: error: Cannot find implementation or library stub for module named "sklearn.model_selection"  [import-not-found]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5148869Z src/quantum_nn/applications/quantum_embedding.py:16: error: Cannot find implementation or library stub for module named "sklearn.preprocessing"  [import-not-found]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5150459Z src/quantum_nn/applications/quantum_embedding.py:18: error: Skipping analyzing "quantum_nn.circuits": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5152060Z src/quantum_nn/applications/quantum_embedding.py:19: error: Skipping analyzing "quantum_nn.layers": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5153195Z src/quantum_nn/applications/quantum_embedding.py:74: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5154053Z src/quantum_nn/applications/quantum_embedding.py:74: note: Use "-> None" if function does not return a value
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5154913Z src/quantum_nn/applications/quantum_embedding.py:203: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5155941Z src/quantum_nn/applications/quantum_embedding.py:313: error: Cannot find implementation or library stub for module named "sklearn.svm"  [import-not-found]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5156934Z src/quantum_nn/applications/quantum_embedding.py:341: error: Incompatible types in assignment (expression has type "ndarray[Any, Any]", variable has type "None")  [assignment]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5157887Z src/quantum_nn/applications/quantum_embedding.py:371: error: Returning Any from function declared to return "ndarray[Any, Any]"  [no-any-return]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5158735Z src/quantum_nn/applications/quantum_embedding.py:376: error: Returning Any from function declared to return "ndarray[Any, Any]"  [no-any-return]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5159587Z src/quantum_nn/applications/quantum_embedding.py:392: error: Returning Any from function declared to return "ndarray[Any, Any]"  [no-any-return]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5160447Z src/quantum_nn/applications/quantum_embedding.py:397: error: Returning Any from function declared to return "ndarray[Any, Any]"  [no-any-return]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5161290Z src/quantum_nn/applications/quantum_embedding.py:410: error: Returning Any from function declared to return "float"  [no-any-return]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5162259Z src/quantum_nn/applications/quantum_embedding.py:460: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5162954Z src/quantum_nn/applications/quantum_embedding.py:516: error: Module has no attribute "viridis"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5163610Z src/quantum_nn/applications/quantum_embedding.py:520: error: Module has no attribute "viridis"  [attr-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5429021Z src/quantum_nn/applications/medical_imaging/demo_medical_imaging.py:15: error: Library stubs not installed for "tensorflow"  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5430865Z src/quantum_nn/applications/medical_imaging/demo_medical_imaging.py:20: error: Skipping analyzing "quantum_nn.applications.medical_imaging": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5433274Z src/quantum_nn/applications/medical_imaging/demo_medical_imaging.py:28: error: Skipping analyzing "quantum_nn.benchmarks": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5434816Z src/quantum_nn/applications/medical_imaging/demo_medical_imaging.py:37: error: Name "Tuple" is not defined  [name-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5436001Z src/quantum_nn/applications/medical_imaging/demo_medical_imaging.py:37: note: Did you forget to import it from "typing"? (Suggestion: "from typing import Tuple")
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5437041Z src/quantum_nn/applications/medical_imaging/demo_medical_imaging.py:40: error: Name "Tuple" is not defined  [name-defined]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5438077Z src/quantum_nn/applications/medical_imaging/demo_medical_imaging.py:40: note: Did you forget to import it from "typing"? (Suggestion: "from typing import Tuple")
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5439188Z src/quantum_nn/applications/medical_imaging/demo_medical_imaging.py:96: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5440434Z src/quantum_nn/applications/medical_imaging/demo_medical_imaging.py:131: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5441453Z src/quantum_nn/applications/medical_imaging/demo_medical_imaging.py:172: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5442593Z src/quantum_nn/applications/medical_imaging/demo_medical_imaging.py:206: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5443602Z src/quantum_nn/applications/medical_imaging/demo_medical_imaging.py:230: error: Function is missing a type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5444644Z src/quantum_nn/applications/medical_imaging/demo_medical_imaging.py:245: error: Function is missing a return type annotation  [no-untyped-def]
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5445662Z src/quantum_nn/applications/medical_imaging/demo_medical_imaging.py:245: note: Use "-> None" if function does not return a value
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5478229Z Found 211 errors in 24 files (checked 38 source files)
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5638676Z ##[error]Process completed with exit code 1.
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.5730124Z Post job cleanup.
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.6444685Z [command]/usr/bin/git version
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.6478730Z git version 2.49.0
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.6520509Z Temporarily overriding HOME='/home/runner/work/_temp/136c9413-25f0-4a52-bf43-29add83a201d' before making global git config changes
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.6521682Z Adding repository directory to the temporary git global config as a safe directory
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.6524711Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/quantum-neural-network/quantum-neural-network
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.6555142Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.6584858Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.6807746Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.6827822Z http.https://github.com/.extraheader
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.6839382Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.6866885Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test (3.10)	UNKNOWN STEP	2025-06-28T19:34:30.7193892Z Cleaning up orphan processes

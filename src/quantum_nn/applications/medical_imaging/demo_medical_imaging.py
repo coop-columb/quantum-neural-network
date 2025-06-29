@@ -1,5 +1,3 @@
-from typing import Tuple
-
 #!/usr/bin/env python
 """
 Medical imaging demonstration script.
@@ -11,6 +9,7 @@ import logging
 import os
 import sys
 from pathlib import Path
+from typing import Tuple
 
 import matplotlib.pyplot as plt
 import numpy as np

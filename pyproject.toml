@@ -28,6 +28,8 @@ dependencies = [
     "qiskit>=0.37.0",
     "matplotlib>=3.5.0",
     "pandas>=1.4.0",
+    "scikit-learn>=1.1.0",
+    "kaggle>=1.5.0",
 ]
 
 [project.optional-dependencies]
@@ -63,7 +65,6 @@ disallow_incomplete_defs = false
 
 # Temporary - ignore type errors in new modules
 
-
 [[tool.mypy.overrides]]
 module = "quantum_nn.applications.*"
 ignore_errors = true
@@ -72,6 +73,17 @@ ignore_errors = true
 module = "quantum_nn.visualization.*"
 ignore_errors = true
 
+[[tool.mypy.overrides]]
+module = "sklearn.*"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "kaggle.*"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "pennylane.*"
+ignore_errors = true
 
 [[tool.mypy.overrides]]
 module = "matplotlib.*"
