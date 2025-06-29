@@ -48,7 +48,7 @@ class QuantumAwareOptimizer(tf.keras.optimizers.Optimizer):
         ):
             return learning_rate
         else:
-            return tf.Variable(float(learning_rate), name="learning_rate")
+            return tf.Variable(tf.constant(learning_rate, dtype=tf.float32), name="learning_rate")
 
     def apply_gradients(
         self,

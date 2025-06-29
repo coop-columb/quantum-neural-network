@@ -62,8 +62,11 @@ class SPSAOptimizer(QuantumAwareOptimizer):
         self.momentum = momentum
 
         # Initialize optimizer state
-        self._iteration = tf.Variable(0, name="iteration", dtype=tf.int64)
-        self._velocity: Dict[str, tf.Variable] = {}  # Momentum velocity
+        self._iteration = tf.Variable(
+            tf.constant(0, dtype=tf.int64), name="iteration", dtype=tf.int64
+        )
+        # Momentum velocity
+        self._velocity: Dict[tf.Variable, tf.Variable] = {}
 
     def _create_slots(self, var_list: List[tf.Variable]):
         """Create optimizer state variables."""

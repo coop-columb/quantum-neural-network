@@ -57,10 +57,10 @@ def plot_state_amplitudes(
     if show_phase:
         normalized_phases = (phases + np.pi) / (2 * np.pi)
         for i, bar in enumerate(bars):
-            bar.set_color(cm.hsv(normalized_phases[i]))
+            bar.set_color(cm.get_cmap("hsv")(normalized_phases[i]))
 
         # Add color bar for phase reference
-        sm = plt.cm.ScalarMappable(cmap=cm.hsv, norm=plt.Normalize(0, 2 * np.pi))
+        sm = plt.cm.ScalarMappable(cmap=cm.get_cmap("hsv"), norm=plt.Normalize(0, 2 * np.pi))
         sm.set_array([])
         cbar = plt.colorbar(sm, ax=ax)
         cbar.set_label("Phase (radians)")
@@ -125,6 +125,7 @@ def plot_state_bloch(
     for i, qubit_idx in enumerate(qubit_indices):
         # Create subplot
         ax = fig.add_subplot(n_rows, n_cols, i + 1, projection="3d")
+        assert isinstance(ax, Axes3D)
 
         # Calculate reduced density matrix for this qubit
         reduced_dm = qml.math.reduced_dm(density_matrix, [qubit_idx], n_qubits)
@@ -221,6 +222,7 @@ def plot_state_city(
     # Create figure
     fig = plt.figure(figsize=figsize)
     ax = fig.add_subplot(111, projection="3d")
+    assert isinstance(ax, Axes3D)
 
     # Create city plot
     cmap = plt.get_cmap(colormap)

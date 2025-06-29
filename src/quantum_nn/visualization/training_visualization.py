@@ -99,9 +99,9 @@ def plot_loss_landscape(
             params[param_indices[1]],
             loss_fn(params),
             color="red",
-            s=100,
             marker="*",
             label="Current Parameters",
+            s=100,
         )
 
         # Set labels

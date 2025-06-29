@@ -57,7 +57,9 @@ class ParameterShiftOptimizer(QuantumAwareOptimizer):
         self.epsilon = epsilon
 
         # Initialize optimizer state
-        self._iteration = tf.Variable(0, name="iteration", dtype=tf.int64)
+        self._iteration = tf.Variable(
+            tf.constant(0, dtype=tf.int64), name="iteration", dtype=tf.int64
+        )
         self._m: Dict[tf.Variable, tf.Variable] = {}  # First moment
         self._v: Dict[tf.Variable, tf.Variable] = {}  # Second moment
 
@@ -87,22 +89,27 @@ class ParameterShiftOptimizer(QuantumAwareOptimizer):
         """
         gradients = tf.TensorArray(tf.float32, size=params.shape[0])
 
-        for i in range(params.shape[0]):
-            # Create shifted parameters
-            shift_forward = tf.tensor_scatter_nd_update(
-                params, [[i]], [params[i] + self.shift]
-            )
-            shift_backward = tf.tensor_scatter_nd_update(
-                params, [[i]], [params[i] - self.shift]
-            )
+        if params.shape[0] is not None:
+            for i in range(params.shape[0]):
+                # Create shifted parameters
+                shift_forward = tf.tensor_scatter_nd_update(
+                    params, [[i]], [params[i] + self.shift]
+                )
+                shift_backward = tf.tensor_scatter_nd_update(
+                    params, [[i]], [params[i] - self.shift]
+                )
 
-            # Evaluate circuit with shifted parameters
-            forward = self.circuit_evaluator(shift_forward, inputs)
-            backward = self.circuit_evaluator(shift_backward, inputs)
+                # Evaluate circuit with shifted parameters
+                forward = self.circuit_evaluator(shift_forward, inputs)
+                backward = self.circuit_evaluator(shift_backward, inputs)
 
-            # Compute gradient using parameter-shift rule
-            gradient = tf.reduce_mean(forward - backward) / (2 * tf.sin(self.shift))
-            gradients = gradients.write(i, gradient)
+                # Compute gradient using parameter-shift rule
+                # Gradient = (f(θ + π/2) - f(θ - π/2)) / (2 * sin(π/2))
+                # Here, sin(π/2) = 1, so we can simplify
+                forward = tf.reduce_mean(forward, axis=0)
+                backward = tf.reduce_mean(backward, axis=0)
+                gradient = tf.reduce_mean(forward - backward) / (2 * tf.sin(self.shift))
+                gradients = gradients.write(i, gradient)
 
         return gradients.stack()
 

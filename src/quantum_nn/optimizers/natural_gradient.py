@@ -14,6 +14,9 @@ import tensorflow as tf
 from quantum_nn.optimizers.quantum_aware_optimizer import QuantumAwareOptimizer
 
 
+@tf.keras.utils.register_keras_serializable(package="QuantumNN")
+
+
 class QuantumNaturalGradient(QuantumAwareOptimizer):
     """
     Optimizer using quantum natural gradient for quantum neural networks.

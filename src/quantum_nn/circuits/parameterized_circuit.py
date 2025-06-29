@@ -205,4 +205,4 @@ class ParameterizedCircuit:
         Returns:
             Number of parameters
         """
-        return self.n_params
+        return int(self.n_params)
