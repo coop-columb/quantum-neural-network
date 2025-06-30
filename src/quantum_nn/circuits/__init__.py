@@ -6,7 +6,7 @@ __all__ = [
     "gray_encoding",
     "ParameterizedCircuit",
     "strongly_entangling",
-    "qaoa_ansatz"
+    "qaoa_ansatz",
 ]
 
 from .encodings import (
