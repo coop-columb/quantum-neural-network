@@ -1,20 +1,25 @@
 __all__ = [
-    "amplitude_encoding",
-    "angle_encoding",
-    "basis_encoding",
-    "binary_encoding",
-    "gray_encoding",
-    "ParameterizedCircuit",
-    "qaoa_ansatz",
-    "strongly_entangling",
+    "QuantumEncoder",
+    "AmplitudeEncoding",
+    "AngleEncoding",
+    "BasisEncoding",
+    "HybridEncoding",
+    "QuantumCircuitTemplate",
+    "StronglyEntanglingLayers",
+    "QuantumConvolutionLayers",
+    "QuantumResidualLayers",
 ]
 
 from .encodings import (
-    amplitude_encoding,
-    angle_encoding,
-    basis_encoding,
-    binary_encoding,
-    gray_encoding,
+    QuantumEncoder,
+    AmplitudeEncoding,
+    AngleEncoding,
+    BasisEncoding,
+    HybridEncoding,
 )
-from .parameterized_circuit import ParameterizedCircuit
-from .templates import qaoa_ansatz, strongly_entangling
+from .templates import (
+    QuantumCircuitTemplate,
+    StronglyEntanglingLayers,
+    QuantumConvolutionLayers,
+    QuantumResidualLayers,
+)
