@@ -59,9 +59,9 @@ class QuantumAwareOptimizer(tf.keras.optimizers.Optimizer):
         """Apply gradients to variables."""
         raise NotImplementedError("Subclasses must implement apply_gradients")
 
-    def get_config(self) -> Dict[str, Any]:
+    def get_config(self) -> dict[str, Any]:
         """Return the configuration of the optimizer."""
-        config: Dict[str, Any] = super().get_config()
+        config: dict[str, Any] = super().get_config()
 
         if isinstance(
             self._learning_rate, tf.keras.optimizers.schedules.LearningRateSchedule

@@ -60,8 +60,8 @@ class ParameterShiftOptimizer(QuantumAwareOptimizer):
         self._iteration = tf.Variable(
             tf.constant(0, dtype=tf.int64), name="iteration", dtype=tf.int64
         )
-        self._m: Dict[tf.Variable, tf.Variable] = {}  # First moment
-        self._v: Dict[tf.Variable, tf.Variable] = {}  # Second moment
+        self._m: dict[Any, Any] = {}  # First moment
+        self._v: dict[Any, Any] = {}  # Second moment
 
     def _create_slots(self, var_list: List[tf.Variable]):
         """Create optimizer state variables."""
@@ -139,7 +139,7 @@ class ParameterShiftOptimizer(QuantumAwareOptimizer):
         self._iteration.assign_add(1)
 
         # Compute bias correction terms
-        lr = self._get_hyper("learning_rate", tf.float32)
+        lr = self.learning_rate
         beta_1_t = tf.pow(self.beta_1, tf.cast(self._iteration, tf.float32))
         beta_2_t = tf.pow(self.beta_2, tf.cast(self._iteration, tf.float32))
         alpha = lr * tf.sqrt(1 - beta_2_t) / (1 - beta_1_t)
@@ -166,7 +166,7 @@ class ParameterShiftOptimizer(QuantumAwareOptimizer):
 
         return tf.no_op(name=name)
 
-    def get_config(self) -> Dict[str, Any]:
+    def get_config(self) -> dict[str, Any]:
         """Return the configuration of the optimizer."""
         config = super().get_config()
         config.update(

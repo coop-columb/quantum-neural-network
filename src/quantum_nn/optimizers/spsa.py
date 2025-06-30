@@ -66,7 +66,7 @@ class SPSAOptimizer(QuantumAwareOptimizer):
             tf.constant(0, dtype=tf.int64), name="iteration", dtype=tf.int64
         )
         # Momentum velocity
-        self._velocity: Dict[tf.Variable, tf.Variable] = {}
+        self._velocity: dict[Any, Any] = {}
 
     def _create_slots(self, var_list: List[tf.Variable]):
         """Create optimizer state variables."""
@@ -136,7 +136,7 @@ class SPSAOptimizer(QuantumAwareOptimizer):
         self._iteration.assign_add(1)
 
         # Get current learning rate
-        lr = self._get_hyper("learning_rate", tf.float32)
+        lr = self.learning_rate
 
         # Apply updates to each variable
         for grad, var in grads_and_vars:
@@ -157,7 +157,7 @@ class SPSAOptimizer(QuantumAwareOptimizer):
 
         return tf.no_op(name=name)
 
-    def get_config(self) -> Dict[str, Any]:
+    def get_config(self) -> dict[str, Any]:
         """Return the configuration of the optimizer."""
         config = super().get_config()
         config.update(
