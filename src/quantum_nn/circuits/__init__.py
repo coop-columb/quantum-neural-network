@@ -1,3 +1,17 @@
+from .encodings import (
+    AmplitudeEncoding,
+    AngleEncoding,
+    BasisEncoding,
+    HybridEncoding,
+    QuantumEncoder,
+)
+from .templates import (
+    QuantumCircuitTemplate,
+    QuantumConvolutionLayers,
+    QuantumResidualLayers,
+    StronglyEntanglingLayers,
+)
+
 __all__ = [
     "QuantumEncoder",
     "AmplitudeEncoding",
@@ -9,17 +23,3 @@ __all__ = [
     "QuantumConvolutionLayers",
     "QuantumResidualLayers",
 ]
-
-from .encodings import (
-    QuantumEncoder,
-    AmplitudeEncoding,
-    AngleEncoding,
-    BasisEncoding,
-    HybridEncoding,
-)
-from .templates import (
-    QuantumCircuitTemplate,
-    StronglyEntanglingLayers,
-    QuantumConvolutionLayers,
-    QuantumResidualLayers,
-)
