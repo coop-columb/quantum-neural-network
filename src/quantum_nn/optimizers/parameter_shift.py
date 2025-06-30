@@ -58,8 +58,8 @@ class ParameterShiftOptimizer(QuantumAwareOptimizer):
 
         # Initialize optimizer state
         self._iteration = tf.Variable(0, name="iteration", dtype=tf.int64)
-        self._m = {}  # First moment
-        self._v = {}  # Second moment
+        self._m: Dict[Any, Any] = {}  # First moment
+        self._v: Dict[Any, Any] = {}  # Second moment
 
     def _create_slots(self, var_list: List[tf.Variable]):
         """Create optimizer state variables."""
