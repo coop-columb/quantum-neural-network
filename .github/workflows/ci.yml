@@ -46,7 +46,6 @@ jobs:
         grep -A5 "\[tool.isort\]" pyproject.toml || echo "No isort config found"
     - name: Sort imports with isort
       run: |
-        isort --check-only --diff src/quantum_nn/benchmarks/classical_comparison.py || true
         isort --check src tests
     - name: Type check with mypy
       run: |
