@@ -136,7 +136,7 @@ class SPSAOptimizer(QuantumAwareOptimizer):
         self._iteration.assign_add(1)
 
         # Get current learning rate
-        lr = self._get_hyper("learning_rate", tf.float32)
+        lr = self.learning_rate
 
         # Apply updates to each variable
         for grad, var in grads_and_vars:
