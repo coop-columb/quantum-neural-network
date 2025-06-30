@@ -49,3 +49,6 @@ Thumbs.db
 # Project specific
 experiments/results/*
 !experiments/results/.gitkeep
+
+# Data files
+data/
