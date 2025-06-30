@@ -5,7 +5,7 @@ This module provides functions to visualize quantum circuits
 using various representation formats.
 """
 
-from typing import Dict, List, Optional, Union, Any
+from typing import Any, Dict, List, Optional, Union
 
 import matplotlib.pyplot as plt
 import numpy as np

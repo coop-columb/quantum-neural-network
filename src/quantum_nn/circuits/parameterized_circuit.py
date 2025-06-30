@@ -5,23 +5,23 @@ This module provides the fundamental quantum circuit structures
 that serve as the computational backbone for quantum neural networks.
 """
 
-from typing import List, Optional, Tuple, Union, Dict, Any
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 import numpy as np
 import pennylane as qml
 
-from quantum_nn.circuits.templates import (
-    QuantumCircuitTemplate,
-    StronglyEntanglingLayers,
-    QuantumConvolutionLayers,
-    QuantumResidualLayers,
-)
 from quantum_nn.circuits.encodings import (
-    QuantumEncoder,
     AmplitudeEncoding,
     AngleEncoding,
     BasisEncoding,
     HybridEncoding,
+    QuantumEncoder,
+)
+from quantum_nn.circuits.templates import (
+    QuantumCircuitTemplate,
+    QuantumConvolutionLayers,
+    QuantumResidualLayers,
+    StronglyEntanglingLayers,
 )
 
 

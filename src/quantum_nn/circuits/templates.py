@@ -5,7 +5,7 @@ This module provides specialized circuit architectures optimized for
 different machine learning tasks and quantum computing paradigms.
 """
 
-from typing import List, Optional, Tuple, Union, Callable
+from typing import Callable, List, Optional, Tuple, Union
 
 import numpy as np
 import pennylane as qml
