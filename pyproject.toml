@@ -39,8 +39,6 @@ dev = [
     "mypy>=0.950",
     "pylint>=2.13.0",
     "pre-commit>=2.18.0",
-    "types-numpy",
-    "types-matplotlib",
 ]
 docs = [
     "sphinx>=4.5.0",
