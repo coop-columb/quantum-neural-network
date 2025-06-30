@@ -5,6 +5,7 @@ from .encodings import (
     HybridEncoding,
     QuantumEncoder,
 )
+from .parameterized_circuit import ParameterizedCircuit
 from .templates import (
     QuantumCircuitTemplate,
     QuantumConvolutionLayers,
@@ -18,6 +19,7 @@ __all__ = [
     "AngleEncoding",
     "BasisEncoding",
     "HybridEncoding",
+    "ParameterizedCircuit",
     "QuantumCircuitTemplate",
     "StronglyEntanglingLayers",
     "QuantumConvolutionLayers",
