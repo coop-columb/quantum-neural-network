@@ -5,8 +5,8 @@ __all__ = [
     "binary_encoding",
     "gray_encoding",
     "ParameterizedCircuit",
-    "strongly_entangling",
     "qaoa_ansatz",
+    "strongly_entangling",
 ]
 
 from .encodings import (
@@ -17,4 +17,4 @@ from .encodings import (
     gray_encoding,
 )
 from .parameterized_circuit import ParameterizedCircuit
-from .templates import strongly_entangling, qaoa_ansatz
+from .templates import qaoa_ansatz, strongly_entangling
