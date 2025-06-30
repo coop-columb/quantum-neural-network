@@ -53,3 +53,7 @@ experiments/results/*
 
 # Data files
 data/
+
+# Temporary/debugging files
+backups/
+debugging_archive/
