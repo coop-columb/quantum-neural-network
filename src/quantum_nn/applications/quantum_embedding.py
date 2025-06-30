@@ -513,11 +513,12 @@ class QuantumKernelClassifier(BaseEstimator, ClassifierMixin):
         plt.figure(figsize=figsize)
 
         # Plot decision boundary
-        plt.contourf(xx, yy, Z, alpha=0.8, cmap=plt.cm.viridis)
+        cmap_viridis = plt.get_cmap('viridis')
+        plt.contourf(xx, yy, Z, alpha=0.8, cmap=cmap_viridis)
 
         # Plot data points
         scatter = plt.scatter(
-            X_2d[:, 0], X_2d[:, 1], c=y, edgecolors="k", alpha=0.9, cmap=plt.cm.viridis
+            X_2d[:, 0], X_2d[:, 1], c=y, edgecolors="k", alpha=0.9, cmap=cmap_viridis
         )
 
         plt.colorbar(scatter, label="Class")

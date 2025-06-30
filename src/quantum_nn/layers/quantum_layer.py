@@ -46,7 +46,7 @@ class QuantumLayer(tf.keras.layers.Layer):
         if n_qubits is not None:
             self.n_qubits = n_qubits
         elif circuit is not None and hasattr(circuit, "n_qubits"):
-            self.n_qubits = getattr(circuit, "n_qubits")  # type: ignore
+            self.n_qubits = getattr(circuit, "n_qubits", 4)
         else:
             self.n_qubits = 4
         self.weight_shape = weight_shape

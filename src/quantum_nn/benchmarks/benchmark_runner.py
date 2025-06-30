@@ -197,7 +197,8 @@ class BenchmarkRunner:
         metrics = list(perf.keys())
         values = list(perf.values())
 
-        colors = plt.cm.viridis(np.linspace(0, 1, len(metrics)))
+        cmap_viridis = plt.get_cmap('viridis')
+        colors = cmap_viridis(np.linspace(0, 1, len(metrics)))
         ax1.bar(metrics, values, color=colors)
         ax1.set_title("Performance Metrics")
         ax1.set_ylabel("Value")
@@ -207,7 +208,8 @@ class BenchmarkRunner:
         timing_metrics = list(timing.keys())
         timing_values = list(timing.values())
 
-        colors = plt.cm.plasma(np.linspace(0, 1, len(timing_metrics)))
+        cmap_plasma = plt.get_cmap('plasma')
+        colors = cmap_plasma(np.linspace(0, 1, len(timing_metrics)))
         ax2.bar(timing_metrics, timing_values, color=colors)
         ax2.set_title("Timing Metrics")
         ax2.set_ylabel("Time (seconds)")
@@ -343,7 +345,8 @@ class BenchmarkRunner:
             sorted_labels = [labels[i] for i in sorted_indices]
 
             # Create bar chart
-            colors = plt.cm.viridis(np.linspace(0, 1, len(sorted_labels)))
+            cmap_viridis = plt.get_cmap('viridis')
+            colors = cmap_viridis(np.linspace(0, 1, len(sorted_labels)))
             ax.barh(sorted_labels, sorted_values, color=colors)
 
             # Add labels
@@ -403,7 +406,8 @@ class BenchmarkRunner:
             sorted_labels = [labels[i] for i in sorted_indices]
 
             # Create bar chart
-            colors = plt.cm.plasma(np.linspace(0, 1, len(sorted_labels)))
+            cmap_plasma = plt.get_cmap('plasma')
+            colors = cmap_plasma(np.linspace(0, 1, len(sorted_labels)))
             ax.barh(sorted_labels, sorted_values, color=colors)
 
             # Add labels
