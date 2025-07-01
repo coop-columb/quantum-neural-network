@@ -1,3 +1,4 @@
+from .base import QuantumCircuitTemplate
 from .encodings import (
     AmplitudeEncoding,
     AngleEncoding,
@@ -7,7 +8,6 @@ from .encodings import (
 )
 from .parameterized_circuit import ParameterizedCircuit
 from .templates import (
-    QuantumCircuitTemplate,
     QuantumConvolutionLayers,
     QuantumResidualLayers,
     StronglyEntanglingLayers,
