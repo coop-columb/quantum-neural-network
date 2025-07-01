@@ -1,9 +1,30 @@
 """
 Quantum natural gradient optimizer.
 
-This module implements the quantum natural gradient method,
-which takes into account the geometry of the quantum state space
-for more efficient optimization.
+This module implements the quantum natural gradient method, which
+takes into account the geometry of the quantum state space for more
+efficient optimization. The quantum natural gradient uses the quantum
+Fisher information matrix to define a Riemannian metric on the space
+of quantum states, leading to optimization that follows the steepest
+descent direction in this curved space.
+
+The quantum natural gradient direction is computed as:
+    θ_{t+1} = θ_t - η F^{-1} ∇L
+
+where F is the quantum Fisher information matrix, η is the learning rate,
+and ∇L is the standard gradient. The Fisher information matrix encodes
+the geometric structure of the quantum state space and provides better
+convergence properties compared to standard gradient descent.
+
+Key advantages:
+- Accounts for the intrinsic geometry of quantum state space
+- Often requires fewer optimization steps than standard methods
+- Particularly effective for variational quantum algorithms
+- Provides natural units for parameter updates
+
+References:
+- Stokes et al. "Quantum Natural Gradient" Quantum 4, 269 (2020)
+- Yamamoto "On the natural gradient for variational quantum eigensolver"
 """
 
 from typing import Any, Callable, Dict, List, Optional, Tuple, Union
@@ -20,7 +41,50 @@ class QuantumNaturalGradient(QuantumAwareOptimizer):
 
     This optimizer computes the quantum Fisher information matrix to
     account for the Riemannian geometry of the quantum state space,
-    leading to more efficient optimization.
+    leading to more efficient optimization. The natural gradient direction
+    is computed by inverting the Fisher information matrix and applying
+    it to the standard gradient.
+
+    The quantum Fisher information matrix F_ij is defined as:
+    F_ij = Re[⟨∂_i ψ|∂_j ψ⟩ - ⟨∂_i ψ|ψ⟩⟨ψ|∂_j ψ⟩]
+
+    where |ψ⟩ is the quantum state and ∂_i denotes partial derivative
+    with respect to the i-th parameter.
+
+    Key features:
+    - Geometric optimization using Fisher information
+    - Configurable fidelity estimation methods
+    - Damping for numerical stability
+    - Automatic fallback to standard gradients for classical parameters
+
+    Examples:
+        Basic usage with default fidelity estimation:
+
+        >>> def my_circuit(params, inputs):
+        ...     # Quantum circuit evaluation
+        ...     return quantum_expectation_values
+        >>> 
+        >>> optimizer = QuantumNaturalGradient(
+        ...     circuit_evaluator=my_circuit,
+        ...     learning_rate=0.01,
+        ...     damping=0.001
+        ... )
+
+        With custom fidelity estimator:
+
+        >>> def custom_fidelity(params1, params2, inputs):
+        ...     # Custom fidelity computation
+        ...     return fidelity_value
+        >>> 
+        >>> optimizer = QuantumNaturalGradient(
+        ...     circuit_evaluator=my_circuit,
+        ...     fidelity_estimator=custom_fidelity
+        ... )
+
+    Note:
+        The Fisher information matrix computation scales as O(n²) where n
+        is the number of parameters, making this method most suitable for
+        circuits with moderate numbers of parameters (typically < 100).
     """
 
     def __init__(
@@ -165,7 +229,7 @@ class QuantumNaturalGradient(QuantumAwareOptimizer):
         Returns:
             An operation that applies the gradients
         """
-        lr = self._get_hyper("learning_rate", tf.float32)
+        lr = self._get_current_learning_rate()
 
         # Apply updates to each variable
         for grad, var in grads_and_vars:
