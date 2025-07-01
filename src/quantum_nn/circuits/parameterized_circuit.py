@@ -1,24 +1,20 @@
 """
 Parameterized quantum circuit implementation.
-
-This module provides the fundamental quantum circuit structures
-that serve as the computational backbone for quantum neural networks.
 """
 
-from typing import Any, Dict, List, Optional, Tuple, Union
-
+from typing import Any, Dict, List, Optional, Union
 import numpy as np
 import pennylane as qml
 
-from quantum_nn.circuits.encodings import (
+from .base import QuantumCircuitTemplate
+from .encodings import (
     AmplitudeEncoding,
     AngleEncoding,
     BasisEncoding,
     HybridEncoding,
     QuantumEncoder,
 )
-from quantum_nn.circuits.templates import (
-    QuantumCircuitTemplate,
+from .templates import (
     QuantumConvolutionLayers,
     QuantumResidualLayers,
     StronglyEntanglingLayers,
