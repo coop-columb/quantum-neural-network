@@ -3,6 +3,7 @@ Advanced quantum circuit templates for quantum neural networks.
 """
 
 from typing import List, Optional
+
 import numpy as np
 import pennylane as qml
 
