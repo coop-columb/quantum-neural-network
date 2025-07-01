@@ -2,27 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
-The format adheres to [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format adheres to [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0/).
 
 ---
 
 ## [Unreleased]
 ### Added
-- Initial, modular implementation of quantum neural network (QNN) framework.
-- Core quantum circuit templates (e.g., strongly entangling, quantum convolution, quantum residual).
-- Data encoding schemes: amplitude, angle, basis, and hybrid encoding.
-- Quantum-aware optimizers: parameter-shift rule, quantum natural gradient, SPSA.
-- Integration with both Qiskit and PennyLane backends.
-- TensorFlow-compatible quantum layers for hybrid models.
-- Example Jupyter notebooks for classification and regression with QNNs.
-- Benchmark runner for classical vs. quantum model performance.
-- Unit and integration test suite covering major modules.
+- Comprehensive docstrings and interface clarifications for all public classes and functions.
+- Improved parameter, return type, and error documentation for major modules.
+- Project-wide code formatting using Black for consistency and CI compliance.
 
 ### Changed
-- N/A
+- Refactored some function signatures and argument names for clarity (no business logic changes).
+- Updated code style to meet Black and linting standards throughout `src` and `tests`.
 
 ### Fixed
-- N/A
+- Resolved minor inconsistencies in module imports and interface definitions.
+- Fixed various formatting issues identified by Black in the CI workflow.
 
 ---
 
