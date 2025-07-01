@@ -1,14 +1,12 @@
 """
 Advanced quantum circuit templates for quantum neural networks.
-
-This module provides specialized circuit architectures optimized for
-different machine learning tasks and quantum computing paradigms.
 """
 
-from typing import Callable, List, Optional, Tuple, Union
-
+from typing import List, Optional
 import numpy as np
 import pennylane as qml
+
+from .base import QuantumCircuitTemplate
 
 
 class QuantumCircuitTemplate:
