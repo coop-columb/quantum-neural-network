@@ -1,318 +1,208 @@
 """
-Advanced quantum circuit templates for quantum neural networks.
+Parameterized quantum circuit implementation.
 
-This module provides specialized circuit architectures optimized for
-different machine learning tasks and quantum computing paradigms.
+This module provides the fundamental quantum circuit structures
+that serve as the computational backbone for quantum neural networks.
 """
 
-from typing import Callable, List, Optional, Tuple, Union
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 import numpy as np
 import pennylane as qml
 
+from quantum_nn.circuits.encodings import (
+    AmplitudeEncoding,
+    AngleEncoding,
+    BasisEncoding,
+    HybridEncoding,
+    QuantumEncoder,
+)
+from quantum_nn.circuits.templates import (
+    QuantumCircuitTemplate,
+    QuantumConvolutionLayers,
+    QuantumResidualLayers,
+    StronglyEntanglingLayers,
+)
 
-class QuantumCircuitTemplate:
-    """Base class for quantum circuit templates."""
 
-    def __init__(self, n_qubits: int):
+class ParameterizedCircuit:
+    """
+    A parameterized quantum circuit for quantum neural networks.
+
+    This class provides a flexible interface for creating and managing
+    parameterized quantum circuits with customizable structure and complexity.
+
+    Attributes:
+        n_qubits: Number of qubits in the circuit
+        encoder: Quantum encoder for data input
+        template: Quantum circuit template
+        observables: Quantum observables to measure
+        device: Quantum device to use for simulation
+    """
+
+    def __init__(
+        self,
+        n_qubits: int = 4,
+        template: Optional[Union[str, QuantumCircuitTemplate]] = None,
+        template_kwargs: Optional[Dict[str, Any]] = None,
+        encoder: Optional[Union[str, QuantumEncoder]] = None,
+        encoder_kwargs: Optional[Dict[str, Any]] = None,
+        observables: Optional[List[str]] = None,
+        device: str = "default.qubit",
+    ):
         """
-        Initialize a quantum circuit template.
+        Initialize a parameterized quantum circuit.
 
         Args:
             n_qubits: Number of qubits in the circuit
+            template: Circuit template or name ('strongly_entangling', 'convolution', 'residual')
+            template_kwargs: Additional arguments for the template
+            encoder: Data encoder or name ('amplitude', 'angle', 'basis', 'hybrid')
+            encoder_kwargs: Additional arguments for the encoder
+            observables: Quantum observables to measure (default: Pauli-Z on all qubits)
+            device: Quantum device to use for simulation
         """
         self.n_qubits = n_qubits
 
-    def apply(self, params: np.ndarray, wires: List[int]):
+        # Set up encoder
+        self.encoder = self._create_encoder(encoder, encoder_kwargs)
+
+        # Set up template
+        self.template = self._create_template(template, template_kwargs)
+
+        # Set up observables
+        if observables is None:
+            self.observables = [qml.PauliZ(i) for i in range(n_qubits)]
+        else:
+            self.observables = [
+                getattr(qml, obs)(i) for i, obs in enumerate(observables)
+            ]
+
+        # Set up device and circuit
+        self.device = qml.device(device, wires=n_qubits)
+        self.circuit = qml.QNode(self._circuit_fn, self.device)
+
+        # Calculate number of parameters
+        if self.template:
+            self.n_params = self.template.parameter_count()
+        else:
+            # Default to 3 params per qubit if no template
+            self.n_params = 3 * n_qubits
+
+    def _create_encoder(
+        self,
+        encoder: Optional[Union[str, QuantumEncoder]],
+        kwargs: Optional[Dict[str, Any]],
+    ) -> Optional[QuantumEncoder]:
+        """Create a quantum encoder from name or instance."""
+        if encoder is None:
+            return AngleEncoding(self.n_qubits, rotation="X")
+
+        if isinstance(encoder, QuantumEncoder):
+            return encoder
+
+        kwargs = kwargs or {}
+
+        if encoder.lower() == "amplitude":
+            return AmplitudeEncoding(self.n_qubits, **kwargs)
+        elif encoder.lower() == "angle":
+            return AngleEncoding(self.n_qubits, **kwargs)
+        elif encoder.lower() == "basis":
+            return BasisEncoding(self.n_qubits, **kwargs)
+        elif encoder.lower() == "hybrid":
+            # For hybrid, we need to create sub-encoders
+            sub_encoders = kwargs.pop(
+                "encoders",
+                [
+                    AngleEncoding(self.n_qubits // 2),
+                    AmplitudeEncoding(self.n_qubits - (self.n_qubits // 2)),
+                ],
+            )
+            return HybridEncoding(self.n_qubits, sub_encoders, **kwargs)
+        else:
+            raise ValueError(f"Unknown encoder type: {encoder}")
+
+    def _create_template(
+        self,
+        template: Optional[Union[str, QuantumCircuitTemplate]],
+        kwargs: Optional[Dict[str, Any]],
+    ) -> Optional[QuantumCircuitTemplate]:
+        """Create a quantum circuit template from name or instance."""
+        if template is None:
+            return StronglyEntanglingLayers(self.n_qubits, n_layers=2)
+
+        if isinstance(template, QuantumCircuitTemplate):
+            return template
+
+        kwargs = kwargs or {}
+
+        if template.lower() == "strongly_entangling":
+            return StronglyEntanglingLayers(self.n_qubits, **kwargs)
+        elif template.lower() == "convolution":
+            return QuantumConvolutionLayers(self.n_qubits, **kwargs)
+        elif template.lower() == "residual":
+            # For residual, we need to create a sub-template
+            block_template = kwargs.pop(
+                "block_template", StronglyEntanglingLayers(self.n_qubits, n_layers=1)
+            )
+            return QuantumResidualLayers(
+                self.n_qubits, block_template=block_template, **kwargs
+            )
+        else:
+            raise ValueError(f"Unknown template type: {template}")
+
+    def _circuit_fn(self, params, inputs=None):
         """
-        Apply the circuit template to the specified wires.
+        Define the quantum circuit function.
+
+        Args:
+            params: Circuit parameters for rotation gates
+            inputs: Classical input data to encode (optional)
+
+        Returns:
+            Measurement results from the circuit
+        """
+        # Data encoding layer
+        if inputs is not None and self.encoder:
+            self.encoder.encode(inputs, wires=range(self.n_qubits))
+
+        # Apply circuit template
+        if self.template:
+            self.template.apply(params, wires=range(self.n_qubits))
+        else:
+            # Fallback to simple rotations if no template
+            param_idx = 0
+            for i in range(self.n_qubits):
+                qml.RX(params[param_idx], wires=i)
+                param_idx += 1
+                qml.RY(params[param_idx], wires=i)
+                param_idx += 1
+                qml.RZ(params[param_idx], wires=i)
+                param_idx += 1
+
+        # Return measurement results
+        return [qml.expval(obs) for obs in self.observables]
+
+    def __call__(
+        self, params: np.ndarray, inputs: Optional[np.ndarray] = None
+    ) -> np.ndarray:
+        """
+        Execute the quantum circuit with the given parameters and inputs.
 
         Args:
             params: Circuit parameters
-            wires: Quantum wires to apply the circuit to
-        """
-        raise NotImplementedError("Subclasses must implement apply method")
+            inputs: Classical input data (optional)
 
-    def parameter_count(self) -> int:
+        Returns:
+            Circuit measurement results
         """
-        Return the number of parameters required by this template.
+        return np.array(self.circuit(params, inputs))
+
+    def get_n_params(self) -> int:
+        """
+        Get the total number of parameters in the circuit.
 
         Returns:
             Number of parameters
         """
-        raise NotImplementedError("Subclasses must implement parameter_count method")
-
-
-class StronglyEntanglingLayers(QuantumCircuitTemplate):
-    """
-    Strongly entangling layers circuit template.
-
-    This template creates a circuit with alternating rotation and entanglement layers
-    that maximizes the entanglement between qubits, suitable for complex quantum
-    machine learning tasks.
-    """
-
-    def __init__(self, n_qubits: int, n_layers: int, pattern: str = "full"):
-        """
-        Initialize strongly entangling layers template.
-
-        Args:
-            n_qubits: Number of qubits in the circuit
-            n_layers: Number of entangling layers
-            pattern: Entanglement pattern ('full', 'linear', 'circular', or 'nearest_neighbor')
-        """
-        super().__init__(n_qubits)
-        self.n_layers = n_layers
-        self.pattern = pattern
-
-    def apply(self, params: np.ndarray, wires: List[int]):
-        """
-        Apply the circuit template to the specified wires.
-
-        Args:
-            params: Circuit parameters (shape should match parameter_count)
-            wires: Quantum wires to apply the circuit to
-        """
-        n_params = self.parameter_count()
-        if params.shape[0] != n_params:
-            raise ValueError(f"Expected {n_params} parameters, got {params.shape[0]}")
-
-        param_idx = 0
-
-        # Apply alternating layers of rotations and entanglements
-        for layer in range(self.n_layers):
-            # Rotation layer - 3 rotations per qubit
-            for wire_idx, wire in enumerate(wires):
-                qml.Rot(
-                    params[param_idx],
-                    params[param_idx + 1],
-                    params[param_idx + 2],
-                    wires=wire,
-                )
-                param_idx += 3
-
-            # Entanglement layer
-            if self.pattern == "full":
-                # Full entanglement - each qubit entangled with every other
-                for i, wire_i in enumerate(wires[:-1]):
-                    for wire_j in wires[i + 1 :]:
-                        qml.CNOT(wires=[wire_i, wire_j])
-
-            elif self.pattern == "linear":
-                # Linear entanglement - each qubit entangled with the next
-                for i in range(len(wires) - 1):
-                    qml.CNOT(wires=[wires[i], wires[i + 1]])
-
-            elif self.pattern == "circular":
-                # Circular entanglement - like linear but with a connection back to the first qubit
-                for i in range(len(wires)):
-                    qml.CNOT(wires=[wires[i], wires[(i + 1) % len(wires)]])
-
-            elif self.pattern == "nearest_neighbor":
-                # Apply entanglement between nearest neighbors with increasing range
-                # At layer l, connect qubits that are l+1 apart
-                range_l = (layer % (len(wires) - 1)) + 1
-                for i in range(len(wires) - range_l):
-                    qml.CNOT(wires=[wires[i], wires[i + range_l]])
-
-            else:
-                raise ValueError(f"Unknown entanglement pattern: {self.pattern}")
-
-    def parameter_count(self) -> int:
-        """
-        Return the number of parameters required by this template.
-
-        Returns:
-            Number of parameters (3 rotations per qubit per layer)
-        """
-        return 3 * self.n_qubits * self.n_layers
-
-
-class QuantumConvolutionLayers(QuantumCircuitTemplate):
-    """
-    Quantum convolution circuit template.
-
-    This template implements a quantum analog of convolutional layers,
-    applying the same unitary transformation to overlapping subsets of qubits.
-    """
-
-    def __init__(
-        self, n_qubits: int, n_layers: int, kernel_size: int = 2, stride: int = 1
-    ):
-        """
-        Initialize quantum convolution layers template.
-
-        Args:
-            n_qubits: Number of qubits in the circuit
-            n_layers: Number of convolutional layers
-            kernel_size: Size of the convolutional kernel (number of qubits)
-            stride: Stride of the convolution operation
-        """
-        super().__init__(n_qubits)
-        if kernel_size > n_qubits:
-            raise ValueError(
-                f"Kernel size ({kernel_size}) cannot be larger than the number of qubits ({n_qubits})"
-            )
-
-        self.n_layers = n_layers
-        self.kernel_size = kernel_size
-        self.stride = stride
-
-        # Calculate number of convolution operations per layer
-        self.n_convs_per_layer = 1 + (n_qubits - kernel_size) // stride
-
-    def apply(self, params: np.ndarray, wires: List[int]):
-        """
-        Apply the circuit template to the specified wires.
-
-        Args:
-            params: Circuit parameters (shape should match parameter_count)
-            wires: Quantum wires to apply the circuit to
-        """
-        n_params = self.parameter_count()
-        if params.shape[0] != n_params:
-            raise ValueError(f"Expected {n_params} parameters, got {params.shape[0]}")
-
-        param_idx = 0
-
-        # Apply convolutional layers
-        for layer in range(self.n_layers):
-            # Apply convolution operations with shared parameters
-            layer_params = params[param_idx : param_idx + self.params_per_kernel()]
-            param_idx += self.params_per_kernel()
-
-            # Apply the same unitary to each kernel position
-            for conv_idx in range(self.n_convs_per_layer):
-                # Calculate the wires for this convolution
-                start_idx = conv_idx * self.stride
-                end_idx = start_idx + self.kernel_size
-                kernel_wires = wires[start_idx:end_idx]
-
-                # Apply a parameterized unitary to these wires
-                kernel_param_idx = 0
-
-                # First apply single-qubit rotations
-                for wire in kernel_wires:
-                    qml.Rot(
-                        layer_params[kernel_param_idx],
-                        layer_params[kernel_param_idx + 1],
-                        layer_params[kernel_param_idx + 2],
-                        wires=wire,
-                    )
-                    kernel_param_idx += 3
-
-                # Then apply two-qubit entangling gates between adjacent qubits in the kernel
-                for i in range(len(kernel_wires) - 1):
-                    qml.CRot(
-                        layer_params[kernel_param_idx],
-                        layer_params[kernel_param_idx + 1],
-                        layer_params[kernel_param_idx + 2],
-                        wires=[kernel_wires[i], kernel_wires[i + 1]],
-                    )
-                    kernel_param_idx += 3
-
-    def params_per_kernel(self) -> int:
-        """Calculate parameters needed per kernel."""
-        # 3 parameters per single-qubit rotation for each qubit in the kernel
-        single_qubit_params = 3 * self.kernel_size
-
-        # 3 parameters per two-qubit gate for each adjacent pair in the kernel
-        two_qubit_params = 3 * (self.kernel_size - 1)
-
-        return single_qubit_params + two_qubit_params
-
-    def parameter_count(self) -> int:
-        """
-        Return the number of parameters required by this template.
-
-        Returns:
-            Number of parameters
-        """
-        # Parameters per kernel * number of layers
-        # Note: parameters are shared across kernel positions in the same layer
-        return self.params_per_kernel() * self.n_layers
-
-
-class QuantumResidualLayers(QuantumCircuitTemplate):
-    """
-    Quantum residual circuit template.
-
-    This template implements a quantum analog of residual connections,
-    where the quantum state at the input of a block can be combined with
-    its output through controlled operations.
-    """
-
-    def __init__(
-        self, n_qubits: int, n_blocks: int, block_template: QuantumCircuitTemplate
-    ):
-        """
-        Initialize quantum residual layers template.
-
-        Args:
-            n_qubits: Number of qubits in the circuit
-            n_blocks: Number of residual blocks
-            block_template: Circuit template to use for each block
-        """
-        super().__init__(n_qubits)
-        self.n_blocks = n_blocks
-        self.block_template = block_template
-
-        # Verify that the block template has the same number of qubits
-        if block_template.n_qubits != n_qubits:
-            raise ValueError(
-                f"Block template n_qubits ({block_template.n_qubits}) "
-                f"must match circuit n_qubits ({n_qubits})"
-            )
-
-        # Parameters for the residual connections
-        self.residual_params_per_block = n_qubits
-
-    def apply(self, params: np.ndarray, wires: List[int]):
-        """
-        Apply the circuit template to the specified wires.
-
-        Args:
-            params: Circuit parameters (shape should match parameter_count)
-            wires: Quantum wires to apply the circuit to
-        """
-        n_params = self.parameter_count()
-        if params.shape[0] != n_params:
-            raise ValueError(f"Expected {n_params} parameters, got {params.shape[0]}")
-
-        param_idx = 0
-        block_params_count = self.block_template.parameter_count()
-
-        # Apply residual blocks
-        for block in range(self.n_blocks):
-            # Get parameters for this block
-            block_params = params[param_idx : param_idx + block_params_count]
-            param_idx += block_params_count
-
-            # Apply block template
-            self.block_template.apply(block_params, wires)
-
-            # Apply residual connection if not the last block
-            # This is done through controlled operations that can
-            # partially "undo" the block transformations
-            if block < self.n_blocks - 1:
-                residual_params = params[
-                    param_idx : param_idx + self.residual_params_per_block
-                ]
-                param_idx += self.residual_params_per_block
-
-                # Apply parameterized residual connections
-                for i, wire in enumerate(wires):
-                    # Parameterized phase shift controls the residual strength
-                    qml.PhaseShift(residual_params[i], wires=wire)
-
-    def parameter_count(self) -> int:
-        """
-        Return the number of parameters required by this template.
-
-        Returns:
-            Number of parameters
-        """
-        # Parameters for blocks plus parameters for residual connections
-        block_params = self.block_template.parameter_count() * self.n_blocks
-        residual_params = self.residual_params_per_block * (self.n_blocks - 1)
-        return block_params + residual_params
+        return self.n_params
