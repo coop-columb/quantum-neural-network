@@ -3,7 +3,9 @@ Base classes for quantum neural network circuits.
 """
 
 from typing import List
+
 import numpy as np
+
 
 class QuantumCircuitTemplate:
     """Base class for quantum circuit templates."""
