@@ -140,7 +140,7 @@ def draw_circuit(
 
     elif output_format.lower() == "text":
         # Use PennyLane's ASCII text drawer for console output
-        text_diagram = qml.draw(circuit_function)
+        text_diagram = qml.draw(circuit_function)()
 
         # Save text output if filename is provided
         if filename:
@@ -159,7 +159,7 @@ def draw_circuit(
                 circuit_function,
                 expansion_strategy="device",
                 output_format="latex_source",
-            )
+            )()
             with open(filename, "w") as f:
                 f.write(tikz_code)
 
