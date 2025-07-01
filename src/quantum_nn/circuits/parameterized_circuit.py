@@ -1,5 +1,10 @@
 """
 Parameterized quantum circuit implementation.
+
+This module provides the main ParameterizedCircuit class that combines quantum
+encodings and circuit templates to create flexible, trainable quantum circuits
+for quantum neural networks. It serves as the primary interface for building
+and executing parameterized quantum circuits.
 """
 
 from typing import Any, Dict, List, Optional, Union

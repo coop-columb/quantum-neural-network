@@ -1,5 +1,15 @@
 """
 Advanced quantum circuit templates for quantum neural networks.
+
+This module provides concrete implementations of quantum circuit templates
+that can be used as building blocks in quantum neural networks. Each template
+implements a specific pattern of quantum operations optimized for different
+types of quantum machine learning tasks.
+
+Available templates:
+- StronglyEntanglingLayers: Creates circuits with maximum entanglement
+- QuantumConvolutionLayers: Implements quantum analogs of convolutional layers
+- QuantumResidualLayers: Provides quantum residual connections
 """
 
 from typing import List, Optional
@@ -24,21 +34,37 @@ class StronglyEntanglingLayers(QuantumCircuitTemplate):
         Initialize strongly entangling layers template.
 
         Args:
-            n_qubits: Number of qubits in the circuit
-            n_layers: Number of entangling layers
-            pattern: Entanglement pattern ('full', 'linear', 'circular', or 'nearest_neighbor')
+            n_qubits (int): Number of qubits in the circuit
+            n_layers (int): Number of entangling layers
+            pattern (str): Entanglement pattern ('full', 'linear', 'circular', or 'nearest_neighbor')
+
+        Raises:
+            ValueError: If n_layers is not positive or pattern is not recognized
         """
         super().__init__(n_qubits)
+
+        if not isinstance(n_layers, int) or n_layers <= 0:
+            raise ValueError(f"n_layers must be a positive integer, got {n_layers}")
+
+        valid_patterns = {"full", "linear", "circular", "nearest_neighbor"}
+        if pattern not in valid_patterns:
+            raise ValueError(
+                f"pattern must be one of {valid_patterns}, got '{pattern}'"
+            )
+
         self.n_layers = n_layers
         self.pattern = pattern
 
-    def apply(self, params: np.ndarray, wires: List[int]):
+    def apply(self, params: np.ndarray, wires: List[int]) -> None:
         """
-        Apply the circuit template to the specified wires.
+        Apply the strongly entangling circuit template to the specified wires.
 
         Args:
-            params: Circuit parameters (shape should match parameter_count)
-            wires: Quantum wires to apply the circuit to
+            params (np.ndarray): Circuit parameters (length must match parameter_count())
+            wires (List[int]): Quantum wires to apply the circuit to
+
+        Raises:
+            ValueError: If the number of parameters doesn't match parameter_count()
         """
         n_params = self.parameter_count()
         if params.shape[0] != n_params:
@@ -110,12 +136,27 @@ class QuantumConvolutionLayers(QuantumCircuitTemplate):
         Initialize quantum convolution layers template.
 
         Args:
-            n_qubits: Number of qubits in the circuit
-            n_layers: Number of convolutional layers
-            kernel_size: Size of the convolutional kernel (number of qubits)
-            stride: Stride of the convolution operation
+            n_qubits (int): Number of qubits in the circuit
+            n_layers (int): Number of convolutional layers
+            kernel_size (int): Size of the convolutional kernel (number of qubits)
+            stride (int): Stride of the convolution operation
+
+        Raises:
+            ValueError: If parameters are invalid (negative values, kernel too large, etc.)
         """
         super().__init__(n_qubits)
+
+        if not isinstance(n_layers, int) or n_layers <= 0:
+            raise ValueError(f"n_layers must be a positive integer, got {n_layers}")
+
+        if not isinstance(kernel_size, int) or kernel_size <= 0:
+            raise ValueError(
+                f"kernel_size must be a positive integer, got {kernel_size}"
+            )
+
+        if not isinstance(stride, int) or stride <= 0:
+            raise ValueError(f"stride must be a positive integer, got {stride}")
+
         if kernel_size > n_qubits:
             raise ValueError(
                 f"Kernel size ({kernel_size}) cannot be larger than the number of qubits ({n_qubits})"
@@ -128,13 +169,16 @@ class QuantumConvolutionLayers(QuantumCircuitTemplate):
         # Calculate number of convolution operations per layer
         self.n_convs_per_layer = 1 + (n_qubits - kernel_size) // stride
 
-    def apply(self, params: np.ndarray, wires: List[int]):
+    def apply(self, params: np.ndarray, wires: List[int]) -> None:
         """
-        Apply the circuit template to the specified wires.
+        Apply the quantum convolution circuit template to the specified wires.
 
         Args:
-            params: Circuit parameters (shape should match parameter_count)
-            wires: Quantum wires to apply the circuit to
+            params (np.ndarray): Circuit parameters (length must match parameter_count())
+            wires (List[int]): Quantum wires to apply the circuit to
+
+        Raises:
+            ValueError: If the number of parameters doesn't match parameter_count()
         """
         n_params = self.parameter_count()
         if params.shape[0] != n_params:
@@ -216,11 +260,23 @@ class QuantumResidualLayers(QuantumCircuitTemplate):
         Initialize quantum residual layers template.
 
         Args:
-            n_qubits: Number of qubits in the circuit
-            n_blocks: Number of residual blocks
-            block_template: Circuit template to use for each block
+            n_qubits (int): Number of qubits in the circuit
+            n_blocks (int): Number of residual blocks
+            block_template (QuantumCircuitTemplate): Circuit template to use for each block
+
+        Raises:
+            ValueError: If n_blocks is not positive or block_template has mismatched qubits
         """
         super().__init__(n_qubits)
+
+        if not isinstance(n_blocks, int) or n_blocks <= 0:
+            raise ValueError(f"n_blocks must be a positive integer, got {n_blocks}")
+
+        if not isinstance(block_template, QuantumCircuitTemplate):
+            raise ValueError(
+                "block_template must be an instance of QuantumCircuitTemplate"
+            )
+
         self.n_blocks = n_blocks
         self.block_template = block_template
 
@@ -234,13 +290,16 @@ class QuantumResidualLayers(QuantumCircuitTemplate):
         # Parameters for the residual connections
         self.residual_params_per_block = n_qubits
 
-    def apply(self, params: np.ndarray, wires: List[int]):
+    def apply(self, params: np.ndarray, wires: List[int]) -> None:
         """
-        Apply the circuit template to the specified wires.
+        Apply the quantum residual circuit template to the specified wires.
 
         Args:
-            params: Circuit parameters (shape should match parameter_count)
-            wires: Quantum wires to apply the circuit to
+            params (np.ndarray): Circuit parameters (length must match parameter_count())
+            wires (List[int]): Quantum wires to apply the circuit to
+
+        Raises:
+            ValueError: If the number of parameters doesn't match parameter_count()
         """
         n_params = self.parameter_count()
         if params.shape[0] != n_params:
