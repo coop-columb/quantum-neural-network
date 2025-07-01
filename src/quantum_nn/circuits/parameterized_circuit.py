@@ -3,6 +3,7 @@ Parameterized quantum circuit implementation.
 """
 
 from typing import Any, Dict, List, Optional, Union
+
 import numpy as np
 import pennylane as qml
 
