@@ -51,7 +51,7 @@ class ParameterShiftOptimizer(QuantumAwareOptimizer):
         >>> def circuit_evaluator(params, inputs):
         ...     # Evaluate quantum circuit and return expectation values
         ...     return tf.random.normal([32])  # Example output
-        >>> 
+        >>>
         >>> optimizer = ParameterShiftOptimizer(
         ...     circuit_evaluator=circuit_evaluator,
         ...     learning_rate=0.01,
@@ -275,7 +275,7 @@ class ParameterShiftOptimizer(QuantumAwareOptimizer):
             Dict[str, Any]: Configuration dictionary containing:
                 - shift: Parameter shift amount used for gradient computation
                 - beta_1: First moment decay rate
-                - beta_2: Second moment decay rate  
+                - beta_2: Second moment decay rate
                 - epsilon: Numerical stability constant
                 - Plus all base class configuration parameters
 
