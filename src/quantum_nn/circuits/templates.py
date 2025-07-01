@@ -10,38 +10,6 @@ import pennylane as qml
 from .base import QuantumCircuitTemplate
 
 
-class QuantumCircuitTemplate:
-    """Base class for quantum circuit templates."""
-
-    def __init__(self, n_qubits: int):
-        """
-        Initialize a quantum circuit template.
-
-        Args:
-            n_qubits: Number of qubits in the circuit
-        """
-        self.n_qubits = n_qubits
-
-    def apply(self, params: np.ndarray, wires: List[int]):
-        """
-        Apply the circuit template to the specified wires.
-
-        Args:
-            params: Circuit parameters
-            wires: Quantum wires to apply the circuit to
-        """
-        raise NotImplementedError("Subclasses must implement apply method")
-
-    def parameter_count(self) -> int:
-        """
-        Return the number of parameters required by this template.
-
-        Returns:
-            Number of parameters
-        """
-        raise NotImplementedError("Subclasses must implement parameter_count method")
-
-
 class StronglyEntanglingLayers(QuantumCircuitTemplate):
     """
     Strongly entangling layers circuit template.
