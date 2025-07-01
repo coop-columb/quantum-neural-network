@@ -34,9 +34,7 @@ class TestStateVisualization:
         assert fig_no_phase is not None
 
         # Test with custom labels
-        fig_custom = plot_state_amplitudes(
-            state, labels=["00", "01", "10", "11"]
-        )
+        fig_custom = plot_state_amplitudes(state, labels=["00", "01", "10", "11"])
         assert fig_custom is not None
 
         # Test error handling for invalid state size
